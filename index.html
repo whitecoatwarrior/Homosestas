@@ -1,0 +1,3485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeostasis MCQs - MDCAT, NUMS, HEC, AKU & Competition Exams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- KaTeX for equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e3a8a;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+            --background: #f0f9ff;
+            --card-bg: #ffffff;
+            --text-primary: #1e3a8a;
+            --text-secondary: #4b5563;
+            --border-radius: 5px;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.2s ease;
+            --compact-spacing: 3px;
+        }
+
+        .dark-mode {
+            --primary: #3b82f6;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #1e293b;
+            --dark: #f1f5f9;
+            --background: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            font-size: 8.1px;
+            line-height: 1.1;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4.86px;
+            overflow-x: hidden; /* Prevent container overflow */
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            margin-bottom: 6.48px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+            animation: pulse 15s infinite linear;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 4.32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo h1 {
+            font-size: 0.972rem;
+            font-weight: 800;
+            margin-bottom: 1.62px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo p {
+            font-weight: 500;
+            font-size: 0.486rem;
+            opacity: 0.9;
+        }
+
+        .header-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content h1 {
+            font-size: 0.648rem;
+            margin-bottom: 4.32px;
+            color: #ffd700;
+        }
+
+        .header-content p {
+            font-size: 0.486rem;
+            line-height: 1.1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 15.12px;
+            height: 15.12px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: absolute;
+            top: 6.48px;
+            right: 6.48px;
+            z-index: 10;
+        }
+
+        .menu-toggle span {
+            width: 15.12px;
+            height: 1.62px;
+            background: white;
+            border-radius: 1.62px;
+            transition: var(--transition);
+            position: relative;
+            transform-origin: center;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(3.24px, 3.24px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4.32px, -4.32px);
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6.48px;
+            position: relative;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .nav-header h2 {
+            font-size: 0.729rem;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: none;
+            width: 25.92px;
+            height: 12.96px;
+            border-radius: 12.96px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1.62px;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle span {
+            width: 9.72px;
+            height: 9.72px;
+            border-radius: 50%;
+            background: var(--primary);
+            position: absolute;
+            transition: var(--transition);
+            left: 1.62px;
+        }
+
+        .theme-toggle.dark span {
+            left: calc(100% - 11.34px);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2.43px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            padding: 4.05px 4.86px;
+            background: var(--card-bg);
+            border: none;
+            border-radius: var(--border-radius);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Panel Styles */
+        .panel {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            margin-bottom: 6.48px;
+            transition: var(--transition);
+            overflow: hidden; /* Prevent content overflow */
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+        }
+
+        .panel-actions {
+            display: flex;
+            gap: 2.43px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.43px;
+            padding: 2.43px 4.86px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0da271;
+            transform: translateY(-1px);
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 4.86px;
+            overflow: hidden; /* Prevent content overflow */
+        }
+
+        .card:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            margin-bottom: 4.05px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 0.567rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: 4.86px;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 9.72px 0;
+            margin-top: auto;
+            font-size: 0.486rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 6.48px;
+            margin-top: 6.48px;
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6.48px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.3s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-6.48px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* MCQ Card Styles */
+        .mcq-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .mcq-info {
+            flex-grow: 1;
+            margin-bottom: 4.86px;
+        }
+
+        .mcq-id {
+            font-weight: 700;
+            font-size: 0.567rem;
+            color: var(--primary);
+            margin-bottom: 1.62px;
+        }
+
+        .mcq-subject {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+        }
+
+        .mcq-chapter {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+            font-weight: 600;
+        }
+
+        .mcq-details {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+            margin-bottom: 4.05px;
+        }
+
+        .start-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 4.05px 6.48px;
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .start-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        /* Stats Panel */
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(64.8px, 1fr));
+            gap: 4.05px;
+            margin-bottom: 4.86px;
+        }
+
+        .stat-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.05px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-value {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Explanation Section Styles */
+        .explanation-section {
+            margin-bottom: 12.15px;
+            padding: 9.72px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden; /* Prevent content overflow */
+        }
+
+        .explanation-header {
+            display: flex;
+            align-items: center;
+            gap: 6.48px;
+            margin-bottom: 6.48px;
+            padding-bottom: 4.86px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .explanation-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.81rem;
+        }
+
+        .explanation-title {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .explanation-content {
+            font-size: 0.567rem;
+            line-height: 1.4;
+            color: var(--text-primary);
+            overflow-wrap: break-word; /* Ensure text wraps */
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .explanation-content h4 {
+            font-size: 0.648rem;
+            margin: 6.48px 0 3.24px;
+            color: var(--primary);
+        }
+
+        .explanation-content p {
+            margin-bottom: 4.86px;
+        }
+
+        .explanation-content ul, .explanation-content ol {
+            margin-left: 16.2px;
+            margin-bottom: 6.48px;
+        }
+
+        .explanation-content li {
+            margin-bottom: 2.43px;
+        }
+
+        .mechanism-diagram {
+            text-align: center;
+            margin: 9.72px 0;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .key-concept {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 3.24px solid var(--primary);
+            padding: 6.48px;
+            margin: 6.48px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            overflow-wrap: break-word; /* Ensure text wraps */
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .key-concept-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 3.24px;
+            font-size: 0.567rem;
+        }
+
+        /* MCQ Detail Styles */
+        .mcq-detail-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 9.72px;
+            margin-bottom: 9.72px;
+            box-shadow: var(--shadow);
+            overflow: hidden; /* Prevent content overflow */
+        }
+
+        .mcq-question {
+            font-size: 0.648rem;
+            font-weight: 600;
+            margin-bottom: 6.48px;
+            color: var(--text-primary);
+            line-height: 1.4;
+            overflow-wrap: break-word; /* Ensure text wraps */
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .mcq-options {
+            margin-bottom: 9.72px;
+        }
+
+        .mcq-option {
+            padding: 4.05px 6.48px;
+            margin-bottom: 3.24px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.567rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 2.43px solid transparent;
+            overflow-wrap: break-word; /* Ensure text wraps */
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .mcq-option:hover {
+            background: rgba(26, 86, 219, 0.05);
+        }
+
+        .mcq-option.selected {
+            border-left-color: var(--primary);
+            background: rgba(26, 86, 219, 0.1);
+        }
+
+        .mcq-option.correct {
+            border-left-color: var(--success);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .mcq-option.incorrect {
+            border-left-color: #dc3545;
+            background: rgba(220, 53, 69, 0.1);
+        }
+
+        .mcq-explanation {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.486rem;
+            line-height: 1.4;
+            display: none;
+            overflow-wrap: break-word; /* Ensure text wraps */
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .mcq-explanation.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .explanation-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+        }
+
+        .mcq-actions {
+            display: flex;
+            gap: 4.86px;
+            margin-top: 6.48px;
+        }
+
+        /* Progress Tracking */
+        .progress-section {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .progress-stats {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            height: 6.48px;
+            background: #e5e7eb;
+            border-radius: 3.24px;
+            overflow: hidden;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            border-radius: 3.24px;
+            transition: width 0.5s ease;
+        }
+
+        /* Welcome Animation */
+        .welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #1e3a8a, #1a56db);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+
+        .welcome-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .welcome-content {
+            text-align: center;
+            color: white;
+            padding: 12.15px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9.72px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4.86px 16.2px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-content h2 {
+            font-size: 1.458rem;
+            margin-bottom: 9.72px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 2.5s infinite;
+        }
+
+        .welcome-content p {
+            font-size: 0.648rem;
+            margin-bottom: 12.15px;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .welcome-logo {
+            font-size: 2.025rem;
+            margin-bottom: 12.15px;
+            color: #ffd700;
+            text-shadow: 0 0 12.15px rgba(255, 215, 0, 0.5);
+            animation: pulseWelcome 1.5s infinite;
+        }
+
+        @keyframes pulseWelcome {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 12.15px;
+            right: 12.15px;
+            background: #25D366;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.053rem;
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Conceptual Q&A Styles */
+        .conceptual-qa {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 8.1px;
+            margin-bottom: 8.1px;
+            border-left: 3.24px solid var(--accent);
+        }
+
+        .qa-question {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 4.05px;
+            overflow-wrap: break-word; /* Ensure text wraps */
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .qa-question i {
+            color: var(--accent);
+            margin-top: 1.62px;
+        }
+
+        .qa-answer {
+            font-size: 0.486rem;
+            line-height: 1.3;
+            color: var(--text-secondary);
+            padding-left: 12.15px;
+            overflow-wrap: break-word; /* Ensure text wraps */
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .qa-answer strong {
+            color: var(--primary);
+        }
+
+        /* Equation styling - UPDATED TO FIX THE ISSUE */
+        .equation {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 4.86px;
+            border-radius: var(--border-radius);
+            margin: 4.86px 0;
+            text-align: center;
+            font-family: 'KaTeX_Main', 'Times New Roman', serif;
+            white-space: normal !important; /* Force text to wrap */
+            overflow-wrap: break-word !important; /* Ensure text wraps */
+            word-wrap: break-word !important;
+            word-break: break-word !important;
+            overflow: hidden !important; /* Prevent any overflow */
+            max-width: 100% !important; /* Ensure it doesn't exceed container */
+            display: block !important; /* Ensure block display */
+        }
+
+        .equation .katex {
+            display: inline-block !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
+            white-space: normal !important;
+            text-align: center !important;
+        }
+
+        .equation .katex-display {
+            display: inline-block !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .equation .katex-display > .katex {
+            display: inline-block !important;
+            max-width: 100% !important;
+            white-space: normal !important;
+            text-align: center !important;
+        }
+
+        .dark-mode .equation {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .katex {
+            font-size: 1em !important;
+        }
+
+        /* Exam Specific Info */
+        .exam-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(97.2px, 1fr));
+            gap: 4.86px;
+            margin-bottom: 9.72px;
+        }
+
+        .exam-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 6.48px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .exam-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 4.05px;
+            font-size: 0.81rem;
+        }
+
+        .exam-name {
+            font-weight: 700;
+            font-size: 0.486rem;
+            color: var(--primary);
+            margin-bottom: 1.62px;
+        }
+
+        .exam-desc {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: var(--card-bg);
+                border-radius: var(--border-radius);
+                box-shadow: var(--shadow);
+                padding: 4.86px;
+                z-index: 100;
+                width: 129.6px;
+                display: none;
+            }
+            
+            .main-nav.active {
+                display: flex;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 4.05px;
+            }
+            
+            header {
+                padding: 4.86px;
+            }
+            
+            .logo h1 {
+                font-size: 0.81rem;
+            }
+            
+            .panel {
+                padding: 4.86px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 2.43px;
+            }
+            
+            .panel-actions {
+                flex-direction: column;
+            }
+            
+            .welcome-content {
+                padding: 9.72px;
+                margin: 6.48px;
+            }
+            
+            .welcome-content h2 {
+                font-size: 1.053rem;
+            }
+            
+            .welcome-content p {
+                font-size: 0.567rem;
+            }
+            
+            .welcome-logo {
+                font-size: 1.62rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 3.24px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 1.62px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Animation -->
+    <div class="welcome-overlay" id="welcome-overlay">
+        <div class="welcome-content scale-in">
+            <div class="welcome-logo">
+                <i class="fas fa-kidneys"></i>
+            </div>
+            <h2>Homeostasis MCQs Portal</h2>
+            <p>Master Homeostasis for MDCAT, NUMS, HEC, AKU & Competition Exams with 120 MCQs and 40 Conceptual Q&A.</p>
+            <button class="btn btn-primary" id="start-btn" style="padding: 4.86px 9.72px; font-size: 0.648rem;">
+                Get Started <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029VbBeueg0QeajGumGWb0f" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="container">
+        <header>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="logo">
+                <h1>Homeostasis MCQs Portal</h1>
+                <p>MDCAT | NUMS | HEC | AKU | Competition Exam Preparation</p>
+            </div>
+            
+            <div class="header-content">
+                <h1>Comprehensive Homeostasis with 120 MCQs & 40 Conceptual Q&A</h1>
+                <p>Master excretion, kidney function, and thermoregulation with detailed explanations and exam-focused MCQs for Pakistani exams</p>
+            </div>
+        </header>
+
+        <!-- Exam Specific Information -->
+        <div class="panel fade-in">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Exam Preparation Focus</h3>
+            </div>
+            <div class="exam-info">
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="exam-name">MDCAT/NUMS</div>
+                    <div class="exam-desc">15-20% weightage in Biology Section</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="exam-name">HEC Test</div>
+                    <div class="exam-desc">Graduate Assessment: Kidney physiology</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="exam-name">AKU Test</div>
+                    <div class="exam-desc">Medical Entry: Urinary system</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="exam-name">Competition</div>
+                    <div class="exam-desc">Olympiad Level: Countercurrent mechanism</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-header">
+                <h2>Navigation</h2>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span></span>
+                </button>
+            </div>
+            
+            <div class="main-nav" id="main-nav">
+                <button class="nav-btn active" data-tab="intro">
+                    <i class="fas fa-home"></i>
+                    <span>Homeostasis Intro</span>
+                </button>
+                <button class="nav-btn" data-tab="excretion">
+                    <i class="fas fa-tint"></i>
+                    <span>Excretion Types</span>
+                </button>
+                <button class="nav-btn" data-tab="kidney">
+                    <i class="fas fa-kidneys"></i>
+                    <span>Kidney Structure</span>
+                </button>
+                <button class="nav-btn" data-tab="nephron">
+                    <i class="fas fa-filter"></i>
+                    <span>Nephron Function</span>
+                </button>
+                <button class="nav-btn" data-tab="osmoregulation">
+                    <i class="fas fa-water"></i>
+                    <span>Osmoregulation</span>
+                </button>
+                <button class="nav-btn" data-tab="disorders">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Urinary Disorders</span>
+                </button>
+                <button class="nav-btn" data-tab="transplant">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Kidney Transplant</span>
+                </button>
+                <button class="nav-btn" data-tab="thermoregulation">
+                    <i class="fas fa-thermometer-half"></i>
+                    <span>Thermoregulation</span>
+                </button>
+                <button class="nav-btn" data-tab="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-value" id="total-mcqs">120</div>
+                <div class="stat-label">Total MCQs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="conceptual-qa">40</div>
+                <div class="stat-label">Conceptual Q&A</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="completed-mcqs">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="accuracy">0%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+        </div>
+
+        <!-- Notice Message -->
+        <div class="panel fade-in" style="border-left: 3.24px solid #f59e0b;">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> Important Notice</h3>
+            </div>
+            <div class="explanation-content">
+                <p><strong>Attention Students:</strong> This portal is designed specifically for Pakistani MDCAT, NUMS, HEC, and AKU exam preparation. All content is based on Federal and KPK textbook materials for Biology. If you find any incorrect information or discrepancies, please inform us immediately through the WhatsApp channel. We strive to provide the most accurate and up-to-date content for your success.</p>
+            </div>
+        </div>
+
+        <!-- Homeostasis Introduction Tab -->
+        <div class="tab-content active" id="intro-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="explanation-title">Homeostasis: Maintaining Internal Balance</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>What is Homeostasis?</h4>
+                    <p>Homeostasis is the maintenance of a <strong>stable internal environment</strong> despite changes in external conditions. The body works to balance various physiological parameters like temperature, pH, water balance, and solute concentrations. Excretion plays a crucial role in homeostasis by removing metabolic wastes.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Nitrogenous Waste Products</div>
+                        <p>Metabolism produces nitrogenous wastes from protein and nucleic acid breakdown. The three main forms are: <strong>Ammonia</strong> (highly toxic, requires 500 ml water/g N), <strong>Urea</strong> (less toxic, requires 50 ml water/g N), and <strong>Uric Acid</strong> (least toxic, requires 1 ml water/g N). The type excreted depends on habitat and water availability.</p>
+                    </div>
+                    
+                    <h4>MDCAT/NUMS Focus Areas:</h4>
+                    <ul>
+                        <li>Types of nitrogenous wastes and their correlation with habitat</li>
+                        <li>Structure and function of human excretory system</li>
+                        <li>Nephron structure and urine formation mechanisms</li>
+                        <li>Osmoregulation and hormonal control (ADH, aldosterone)</li>
+                        <li>Urinary tract disorders and their causes</li>
+                        <li>Thermoregulation mechanisms in humans</li>
+                    </ul>
+                    
+                    <h4>Competition Level Exceptional Cases:</h4>
+                    <ol>
+                        <li><strong>Countercurrent multiplier system:</strong> Creates osmotic gradient in kidney medulla for water reabsorption.</li>
+                        <li><strong>Juxtamedullary vs cortical nephrons:</strong> Different roles in urine concentration.</li>
+                        <li><strong>Renin-angiotensin-aldosterone system:</strong> Complex regulation of blood pressure and sodium balance.</li>
+                        <li><strong>Thermoregulatory adaptations:</strong> Different strategies in endotherms vs ectotherms.</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Trick: Water Requirement Comparison</div>
+                        <p>Remember water requirements for nitrogen excretion: Ammonia (500 ml/g N) > Urea (50 ml/g N) > Uric Acid (1 ml/g N). This explains why aquatic animals excrete ammonia, terrestrial mammals excrete urea, and birds/reptiles excrete uric acid (water conservation).</p>
+                    </div>
+                    
+                    <div class="equation">
+                        $\text{Ammonia: NH}_3 \quad \text{Urea: CO(NH}_2\text{)}_2 \quad \text{Uric Acid: C}_5\text{H}_4\text{O}_3\text{N}_4$
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Ammonotelic: Fish, aquatic invertebrates (require abundant water)</li>
+                        <li>Ureotelic: Mammals, adult amphibians (moderate water requirement)</li>
+                        <li>Uricotelic: Birds, reptiles, insects (minimal water requirement)</li>
+                        <li>Human urine pH: 4.8-7.5 (slightly acidic normally)</li>
+                        <li>Kidneys receive 20-25% of cardiac output (high blood flow)</li>
+                    </ol>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which of the following nitrogenous wastes requires the LEAST amount of water for its excretion?</p>
+                        <p><strong>Options:</strong> A) Ammonia, B) Urea, C) Uric acid, D) Creatinine</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>From Federal Textbook: 1g nitrogen as ammonia needs 500 ml water</li>
+                            <li>1g nitrogen as urea needs 50 ml water</li>
+                            <li>1g nitrogen as uric acid needs only 1 ml water</li>
+                            <li>Uric acid precipitates as crystals, minimal water needed</li>
+                            <li>Creatinine is less relevant for water requirement comparison</li>
+                            <li>Thus uric acid requires least water → Answer: C</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Remember "A-U-U" with decreasing water needs: Ammonia (500) > Urea (50) > Uric acid (1). Numbers represent ml water per g nitrogen.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (5/40)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why do birds and reptiles excrete uric acid instead of urea?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Birds and reptiles need to conserve water. Uric acid requires only 1 ml water per gram of nitrogen compared to 50 ml for urea. Additionally, uric acid precipitates and can be stored in eggs without toxicity. According to KPK textbook, egg shells are permeable to gases but not liquids, so soluble wastes would accumulate to toxic levels.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the advantage of converting ammonia to urea in mammals?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Urea is 100,000 times less toxic than ammonia (Federal textbook). Mammals have less water available than aquatic animals, so they convert ammonia to urea which requires only 50 ml water/g N vs 500 ml for ammonia. This conversion happens in the liver via urea cycle, allowing safer storage and excretion.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is the right kidney slightly lower than the left kidney?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> According to both textbooks, the right kidney is about 1.5-2.0 cm lower than the left kidney because of the large right lobe of the liver above it. The liver occupies space in the right upper abdomen, pushing the right kidney downward.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Homeostasis Introduction MCQs Progress</div>
+                    <div class="progress-stats"><span id="intro-completed">0</span>/12 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="intro-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-home"></i> Homeostasis Introduction MCQs (12)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-intro">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="intro-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Excretion Types Tab -->
+        <div class="tab-content" id="excretion-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="explanation-title">Nitrogenous Excretion: Ammonia, Urea & Uric Acid</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Types of Nitrogenous Wastes:</h4>
+                    <p>Animals excrete different nitrogenous wastes based on their habitat and water availability. This represents an evolutionary adaptation for osmoregulation.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Habitat-Excretion Correlation</div>
+                        <p><strong>Aquatic animals (ammonotelic):</strong> Excrete ammonia directly (highly soluble, requires abundant water). <strong>Semi-terrestrial (ureotelic):</strong> Convert ammonia to urea (less toxic, moderate water need). <strong>Terrestrial/egg-layers (uricotelic):</strong> Excrete uric acid (insoluble, minimal water loss).</p>
+                    </div>
+                    
+                    <!-- FIXED EQUATION - Now in two lines and won't overflow -->
+                    <div class="equation">
+                        $\text{Ammonotelic: Fish, tadpoles} \quad \text{Ureotelic: Mammals, adult amphibians}$<br>
+                        $\text{Uricotelic: Birds, reptiles, insects}$
+                    </div>
+                    
+                    <h4>MDCAT Problem Solving Strategy:</h4>
+                    <ol>
+                        <li>Identify animal's habitat: aquatic → ammonia, terrestrial → urea/uric acid</li>
+                        <li>Consider egg-laying: shelled eggs require uric acid (nontoxic solid)</li>
+                        <li>Water requirement comparison: Ammonia (500:1) > Urea (50:1) > Uric acid (1:1)</li>
+                        <li>Energy cost: Urea synthesis requires ATP, uric acid synthesis most energy costly</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Sharks and Rays</div>
+                        <p>Marine cartilaginous fish (sharks, rays) retain urea in their blood for osmoregulation. They are ureotelic but use urea to match blood osmolarity to seawater (≈1000 mOsm). This is unique among vertebrates. KPK textbook notes they excrete urea but also retain it for osmotic balance.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> A marine bony fish and a shark are compared. Which statement is CORRECT about their nitrogenous excretion?</p>
+                        <p><strong>Options:</strong> A) Both excrete ammonia, B) Both excrete urea, C) Bony fish excretes ammonia, shark excretes urea, D) Bony fish excretes urea, shark excretes ammonia</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>According to Federal textbook: Most bony fish are ammonotelic</li>
+                            <li>KPK textbook states: Sharks (chondrichthyes) excrete urea</li>
+                            <li>Marine bony fish: excrete ammonia directly (ammonotelic)</li>
+                            <li>Sharks: ureotelic, excrete urea (also retain urea for osmoregulation)</li>
+                            <li>Thus: bony fish → ammonia, shark → urea → Answer: C</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Remember "Bony fish = Ammonia, Sharks = Urea". Sharks are cartilaginous fish (chondrichthyes) with different osmoregulatory strategy.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Ammonia toxicity: Raises pH, interferes with membrane transport</li>
+                        <li>Urea synthesis: Occurs in liver via urea cycle (ornithine cycle)</li>
+                        <li>Uric acid: Purine derivative, excreted by insects, birds, reptiles</li>
+                        <li>Human excretion: Mainly urea, small amounts uric acid (from nucleic acids)</li>
+                        <li>Tadpoles: Ammonotelic → ureotelic during metamorphosis</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (10/40)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why can't terrestrial animals excrete ammonia directly?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Ammonia requires 500 ml water per gram nitrogen for dilution to nontoxic levels. Terrestrial animals have limited water availability. Also, ammonia is highly toxic (interferes with nerve function, raises pH). Converting to urea (100,000× less toxic) or uric acid is energetically costly but necessary for water conservation.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What determines whether an animal is ammonotelic, ureotelic, or uricotelic?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Primary factor: Water availability in habitat. Secondary: Evolutionary history and reproductive strategy. Aquatic = ammonotelic. Terrestrial with moderate water = ureotelic. Terrestrial with severe water limitation or egg-laying = uricotelic. According to Federal textbook: "The exact nature of excretory product is determined mainly by the availability of water."</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Excretion Types MCQs Progress</div>
+                    <div class="progress-stats"><span id="excretion-completed">0</span>/12 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="excretion-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-tint"></i> Excretion Types MCQs (12)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-excretion">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="excretion-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Kidney Structure Tab -->
+        <div class="tab-content" id="kidney-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-kidneys"></i>
+                    </div>
+                    <div class="explanation-title">Human Excretory System: Structure & Organization</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Components of Human Excretory System:</h4>
+                    <p>The human urinary system consists of kidneys, ureters, urinary bladder, and urethra. Kidneys are the primary excretory organs, while other structures transport, store, and eliminate urine.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Kidney Position and Structure</div>
+                        <p>Kidneys are <strong>retroperitoneal</strong> (behind peritoneum) at T12-L3 vertebrae. Right kidney is 1.5-2 cm lower due to liver. Each kidney: 12 cm long, 150 g weight, bean-shaped with convex lateral and concave medial surface (hilum). Protected by 11th and 12th ribs.</p>
+                    </div>
+                    
+                    <div class="mechanism-diagram">
+                        <strong>Kidney Internal Structure:</strong><br>
+                        Cortex (outer) → Medulla (pyramids) → Renal pelvis → Ureter<br>
+                        Nephrons located in cortex, collecting ducts in medulla
+                    </div>
+                    
+                    <h4>Detailed Anatomy Comparisons:</h4>
+                    <table style="width:100%; border-collapse: collapse; margin: 9.72px 0; font-size: 0.486rem;">
+                        <tr style="background: var(--primary); color: white;">
+                            <th style="padding: 4.05px; text-align: left;">Structure</th>
+                            <th style="padding: 4.05px; text-align: left;">Length/Size</th>
+                            <th style="padding: 4.05px; text-align: left;">Function</th>
+                            <th style="padding: 4.05px; text-align: left;">Key Features</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Ureters</strong></td>
+                            <td style="padding: 4.05px;">25-30 cm long</td>
+                            <td style="padding: 4.05px;">Transport urine to bladder</td>
+                            <td style="padding: 4.05px;">Muscular, peristaltic movement</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Urinary Bladder</strong></td>
+                            <td style="padding: 4.05px;">Capacity: 400-600 ml</td>
+                            <td style="padding: 4.05px;">Urine storage</td>
+                            <td style="padding: 4.05px;">Distensible, trigone region</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Male Urethra</strong></td>
+                            <td style="padding: 4.05px;">20 cm</td>
+                            <td style="padding: 4.05px;">Urine and semen passage</td>
+                            <td style="padding: 4.05px;">Prostatic, membranous, spongy parts</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4.05px;"><strong>Female Urethra</strong></td>
+                            <td style="padding: 4.05px;">3-4 cm</td>
+                            <td style="padding: 4.05px;">Urine passage only</td>
+                            <td style="padding: 4.05px;">Short → higher UTI risk</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Renal Blood Flow</div>
+                        <p>Kidneys receive 20-25% of cardiac output (≈1.2 L/min) despite being only 0.5% of body weight. This high flow enables filtration of entire plasma volume 60 times daily. Renal artery → segmental → interlobar → arcuate → interlobular → afferent arteriole → glomerulus.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which structure enters and exits the kidney at the hilum?</p>
+                        <p><strong>Options:</strong> A) Only renal artery, B) Renal artery and ureter, C) Renal artery, vein, and ureter, D) Only ureter</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Federal textbook: "hilun (hilus), where the renal artery and nerves enter and the renal vein and the ureter exit"</li>
+                            <li>KPK textbook: "renal artery and nerves enter the kidney, and the renal vein and ureter leave the kidney through hilus"</li>
+                            <li>Thus: renal artery ENTERS, renal vein and ureter EXIT at hilum</li>
+                            <li>Correct answer includes all three structures → Answer: C</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Remember "A-V-U at hilum": Artery in, Vein out, Ureter out. Nerves also enter but not typically asked.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Kidney layers: Fibrous capsule → Cortex → Medulla (pyramids) → Renal pelvis</li>
+                        <li>Calyces: Minor (drain pyramids) → Major → Renal pelvis</li>
+                        <li>Micturition: Bladder emptying controlled by internal (involuntary) and external (voluntary) sphincters</li>
+                        <li>Female UTI risk: 50× more common due to short urethra (3 cm vs 20 cm in males)</li>
+                        <li>Retroperitoneal: Kidneys, ureters, bladder (except dome) are retroperitoneal</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (15/40)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why are urinary tract infections more common in females?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> According to Federal textbook: Female urethra is 1.5 inches (3.8 cm) vs male 8 inches (20 cm). Shorter urethra allows easier bacterial ascent from perineum. Also, urethral opening is closer to anus in females. KPK textbook notes female urethra carries only urine (no antibacterial properties of prostatic fluid).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the functional significance of high renal blood flow?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> High flow (1.2 L/min, 20% cardiac output) enables efficient filtration. Glomerular filtration rate (GFR) is 125 ml/min, requiring high pressure. This allows kidneys to filter entire plasma volume 60× daily, quickly removing wastes and regulating composition. KPK textbook: "kidney receives about 20 percent of the blood coming from the heart."</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Kidney Structure MCQs Progress</div>
+                    <div class="progress-stats"><span id="kidney-completed">0</span>/12 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="kidney-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-kidneys"></i> Kidney Structure MCQs (12)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-kidney">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="kidney-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Nephron Function Tab -->
+        <div class="tab-content" id="nephron-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <div class="explanation-title">Nephron: Functional Unit of Kidney</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Nephron Structure and Types:</h4>
+                    <p>Each kidney contains ~1 million nephrons. Two types: <strong>Cortical</strong> (80%, short loops, in cortex) and <strong>Juxtamedullary</strong> (20%, long loops extend into medulla).</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Nephron Components</div>
+                        <p><strong>Renal corpuscle:</strong> Glomerulus + Bowman's capsule (ultrafiltration). <strong>Renal tubule:</strong> PCT → Loop of Henle → DCT → Collecting duct. PCT: reabsorbs 80% filtrate. Loop: countercurrent multiplier. DCT: fine-tuning. Collecting duct: water reabsorption regulated by ADH.</p>
+                    </div>
+                    
+                    <div class="equation">
+                        $\text{Urine formation = Filtration + Reabsorption + Secretion}$
+                    </div>
+                    
+                    <h4>Urine Formation Processes:</h4>
+                    <table style="width:100%; border-collapse: collapse; margin: 9.72px 0; font-size: 0.486rem;">
+                        <tr style="background: var(--primary); color: white;">
+                            <th style="padding: 4.05px; text-align: left;">Process</th>
+                            <th style="padding: 4.05px; text-align: left;">Location</th>
+                            <th style="padding: 4.05px; text-align: left;">Mechanism</th>
+                            <th style="padding: 4.05px; text-align: left;">Substances</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Ultrafiltration</strong></td>
+                            <td style="padding: 4.05px;">Renal corpuscle</td>
+                            <td style="padding: 4.05px;">Pressure filtration</td>
+                            <td style="padding: 4.05px;">All plasma except proteins/cells</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Reabsorption</strong></td>
+                            <td style="padding: 4.05px;">PCT, Loop, DCT</td>
+                            <td style="padding: 4.05px;">Active/Passive transport</td>
+                            <td style="padding: 4.05px;">Glucose, amino acids, ions, water</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4.05px;"><strong>Secretion</strong></td>
+                            <td style="padding: 4.05px;">DCT, Collecting duct</td>
+                            <td style="padding: 4.05px;">Active transport</td>
+                            <td style="padding: 4.05px;">H⁺, K⁺, drugs, toxins</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Podocytes and Filtration Barrier</div>
+                        <p>Podocytes are specialized epithelial cells in Bowman's capsule with foot processes forming filtration slits. Filtration barrier: 1) Fenestrated endothelium, 2) Basement membrane, 3) Podocyte slit diaphragm. Allows passage of small molecules (< 68 kDa) but retains proteins. KPK textbook: "pores in the capillary endothelium and the gaps in between podocytes are quite large."</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> In which part of the nephron does most selective reabsorption occur?</p>
+                        <p><strong>Options:</strong> A) Glomerulus, B) Proximal convoluted tubule, C) Distal convoluted tubule, D) Collecting duct</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Federal textbook: "Over 80% of the glomerular filtrate is reabsorbed in proximal convoluted tubules"</li>
+                            <li>KPK textbook: "Here all of the glucose, amino acids, vitamins, hormones and about 80% of the sodium chloride and water are reabsorbed" (referring to PCT)</li>
+                            <li>Glomerulus: filtration only, no reabsorption</li>
+                            <li>DCT and collecting duct: fine-tuning, not bulk reabsorption</li>
+                            <li>Thus PCT is site of bulk reabsorption → Answer: B</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Remember "PCT = Bulk Reabsorption (80%)". PCT cells have microvilli (brush border) increasing surface area 20× for absorption.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Glomerular filtration rate (GFR): 125 ml/min (180 L/day)</li>
+                        <li>Efferent arteriole diameter < Afferent arteriole → creates high glomerular pressure</li>
+                        <li>Vasa recta: Capillaries parallel to Loop of Henle (countercurrent exchange)</li>
+                        <li>Juxtaglomerular apparatus: DCT + afferent arteriole, secretes renin</li>
+                        <li>Macula densa: Na⁺ sensors in DCT, regulate GFR via tubuloglomerular feedback</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (20/40)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why does the efferent arteriole have smaller diameter than afferent arteriole?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Creates high hydrostatic pressure in glomerulus for filtration. According to Federal textbook: "Efferent arterioles have somewhat less diameter than that of the afferent vessel. Therefore, a considerable blood pressure is developed in glomerulus." This pressure (≈55 mmHg) drives ultrafiltration against colloid osmotic pressure (≈30 mmHg) and capsular pressure (≈15 mmHg).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the role of juxtamedullary nephrons vs cortical nephrons?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Cortical nephrons (80%): Short loops, in cortex, regulate blood volume under normal hydration. Juxtamedullary nephrons (20%): Long loops extend into medulla, create osmotic gradient for urine concentration. According to KPK textbook: "When water is in short supply, increased water retention occurs through juxtamedullary nephrons."</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Nephron Function MCQs Progress</div>
+                    <div class="progress-stats"><span id="nephron-completed">0</span>/12 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="nephron-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-filter"></i> Nephron Function MCQs (12)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-nephron">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="nephron-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Osmoregulation Tab -->
+        <div class="tab-content" id="osmoregulation-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="explanation-title">Osmoregulation and Urine Concentration</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Mechanisms of Urine Concentration:</h4>
+                    <p>Kidneys regulate water balance by producing dilute (hydration) or concentrated (dehydration) urine. This involves countercurrent multiplier (Loop of Henle) and countercurrent exchanger (vasa recta) systems.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Countercurrent Multiplier System</div>
+                        <p>Loop of Henle creates osmotic gradient in medulla: 300 mOsm (cortex) → 1200 mOsm (papilla). <strong>Ascending limb:</strong> Active NaCl transport, impermeable to water → dilute filtrate. <strong>Descending limb:</strong> Permeable to water, not NaCl → water exits, filtrate concentrates.</p>
+                    </div>
+                    
+                    <div class="equation">
+                        $\text{Medullary gradient: Cortex (300) → Outer medulla (600) → Inner medulla (1200 mOsm)}$
+                    </div>
+                    
+                    <h4>Hormonal Control of Water Balance:</h4>
+                    <table style="width:100%; border-collapse: collapse; margin: 9.72px 0; font-size: 0.486rem;">
+                        <tr style="background: var(--primary); color: white;">
+                            <th style="padding: 4.05px; text-align: left;">Hormone</th>
+                            <th style="padding: 4.05px; text-align: left;">Source</th>
+                            <th style="padding: 4.05px; text-align: left;">Stimulus</th>
+                            <th style="padding: 4.05px; text-align: left;">Action</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>ADH</strong></td>
+                            <td style="padding: 4.05px;">Posterior pituitary</td>
+                            <td style="padding: 4.05px;">↑ Blood osmolarity, ↓ Blood volume</td>
+                            <td style="padding: 4.05px;">↑ Water permeability of collecting duct</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Aldosterone</strong></td>
+                            <td style="padding: 4.05px;">Adrenal cortex</td>
+                            <td style="padding: 4.05px;">Angiotensin II, ↓ Na⁺, ↑ K⁺</td>
+                            <td style="padding: 4.05px;">↑ Na⁺ reabsorption, ↑ K⁺ secretion</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>ANP</strong></td>
+                            <td style="padding: 4.05px;">Heart atria</td>
+                            <td style="padding: 4.05px;">↑ Blood volume/pressure</td>
+                            <td style="padding: 4.05px;">↑ Na⁺ excretion, ↓ ADH/aldosterone</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4.05px;"><strong>Renin</strong></td>
+                            <td style="padding: 4.05px;">JG cells</td>
+                            <td style="padding: 4.05px;">↓ BP, ↓ Na⁺, sympathetic stimulation</td>
+                            <td style="padding: 4.05px;">Activates angiotensin → aldosterone</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Diabetes Insipidus</div>
+                        <p>Condition of ADH deficiency or resistance → large volumes of dilute urine (up to 20 L/day). Two types: Central (ADH deficiency) vs Nephrogenic (kidney unresponsive to ADH). Contrast with diabetes mellitus: sweet urine due to glucose, normal ADH function. Federal textbook: "ADH increases water reabsorption in collecting duct."</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which hormone is primarily responsible for increasing water reabsorption in the collecting ducts when the body is dehydrated?</p>
+                        <p><strong>Options:</strong> A) Aldosterone, B) Antidiuretic hormone (ADH), C) Renin, D) Atrial natriuretic peptide (ANP)</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Federal textbook: "water passes out of the descending limb by osmosis. This movement of water is also promoted by anti-diuretic hormone"</li>
+                            <li>KPK textbook: "ADH opens water channels in collecting ducts to allow water to move out of the filtrate"</li>
+                            <li>Aldosterone: regulates Na⁺/K⁺ balance, not primarily water</li>
+                            <li>Renin: enzyme, not hormone for water reabsorption</li>
+                            <li>ANP: promotes water loss (opposite effect)</li>
+                            <li>Thus ADH increases water reabsorption → Answer: B</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> ADH = Anti-Diuretic = Against urine production = Water conservation. Works on collecting ducts via aquaporin-2 channels.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>ADH also called vasopressin (constricts blood vessels at high doses)</li>
+                        <li>Aldosterone: Steroid hormone, acts on principal cells of DCT/collecting duct</li>
+                        <li>Renin-angiotensin system: Renin → Angiotensin I → (ACE) → Angiotensin II → Aldosterone release</li>
+                        <li>Collecting duct permeability: Normally low, increased by ADH via cAMP mechanism</li>
+                        <li>Juxtaglomerular cells: Modified smooth muscle cells in afferent arteriole, secrete renin</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (25/40)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How does the countercurrent multiplier system concentrate urine?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Ascending limb actively pumps NaCl into interstitium, making it hypertonic. Descending limb loses water to this hypertonic interstitium, concentrating filtrate. This "multiplies" a small difference at each level into large gradient (300→1200 mOsm). Federal textbook: "Due to counter current, filtrate moving in limbs of loop of Henle and the blood moving in the capillaries of vasa recta, water is greatly (approx. 99.5%) reabsorbed."</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why are kidneys called osmoregulatory organs?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Kidneys regulate water and solute balance (osmoregulation), not just excrete wastes. They adjust urine concentration according to hydration: dilute urine when hydrated (↓ ADH), concentrated when dehydrated (↑ ADH). Federal textbook: "Being osmoregulatory organ, these are concern with the formation of dilute urine during the state of flooding and form concentrated urine during the state of dehydration."</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Osmoregulation MCQs Progress</div>
+                    <div class="progress-stats"><span id="osmoregulation-completed">0</span>/12 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="osmoregulation-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-water"></i> Osmoregulation MCQs (12)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-osmoregulation">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="osmoregulation-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Urinary Disorders Tab -->
+        <div class="tab-content" id="disorders-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="explanation-title">Urinary Tract Disorders and Kidney Diseases</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Common Urinary Disorders:</h4>
+                    <p>Urinary system disorders range from infections to kidney failure. Understanding causes, symptoms, and treatments is crucial for medical exams.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Urinary Tract Infections (UTIs)</div>
+                        <p><strong>Urethritis:</strong> Urethra infection. <strong>Cystitis:</strong> Bladder infection (most common). <strong>Pyelonephritis:</strong> Kidney infection (serious). Caused mainly by <em>E. coli</em> (80%). Female risk 50× higher due to short urethra. Symptoms: Dysuria, frequency, urgency, cloudy urine.</p>
+                    </div>
+                    
+                    <div class="equation">
+                        $\text{UTI bacteria: E. coli > Proteus > Klebsiella > Staphylococcus saprophyticus}$
+                    </div>
+                    
+                    <h4>Kidney Stones (Nephrolithiasis):</h4>
+                    <table style="width:100%; border-collapse: collapse; margin: 9.72px 0; font-size: 0.486rem;">
+                        <tr style="background: var(--primary); color: white;">
+                            <th style="padding: 4.05px; text-align: left;">Stone Type</th>
+                            <th style="padding: 4.05px; text-align: left;">% of Cases</th>
+                            <th style="padding: 4.05px; text-align: left;">Causes/Conditions</th>
+                            <th style="padding: 4.05px; text-align: left;">Urine pH</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Calcium oxalate</strong></td>
+                            <td style="padding: 4.05px;">70%</td>
+                            <td style="padding: 4.05px;">Hypercalciuria, hyperoxaluria</td>
+                            <td style="padding: 4.05px;">Acidic</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Struvite</strong></td>
+                            <td style="padding: 4.05px;">15-20%</td>
+                            <td style="padding: 4.05px;">UTI with urea-splitting bacteria</td>
+                            <td style="padding: 4.05px;">Alkaline</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Uric acid</strong></td>
+                            <td style="padding: 4.05px;">5-10%</td>
+                            <td style="padding: 4.05px;">Gout, hyperuricemia</td>
+                            <td style="padding: 4.05px;">Persistently acidic</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4.05px;"><strong>Cystine</strong></td>
+                            <td style="padding: 4.05px;">1-3%</td>
+                            <td style="padding: 4.05px;">Cystinuria (genetic)</td>
+                            <td style="padding: 4.05px;">Acidic</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Kidney Failure Types</div>
+                        <p><strong>Acute renal failure:</strong> Sudden (hours-days), reversible if treated. Causes: Hemorrhage, obstruction, nephritis. <strong>Chronic renal failure:</strong> Gradual (years), irreversible. Causes: Diabetes, hypertension, glomerulonephritis. ESRD (end-stage): GFR < 15 ml/min, requires dialysis/transplant. Federal textbook: "Chronic renal failure is the irreversible deterioration in renal function."</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which condition is characterized by increased calcium in urine and is a major cause of kidney stones?</p>
+                        <p><strong>Options:</strong> A) Hypercalcemia, B) Hypercalciuria, C) Hyperuricemia, D) Hyperoxaluria</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Federal textbook: "Increase calcium level in the blood which is termed hypercalcemia. It, in turn, causes high calcium in the urine, the hypercalciuria."</li>
+                            <li>KPK textbook: "Hypercalcemia... causes hypercalciuria (high calcium in the urine)"</li>
+                            <li>Hypercalcemia: high blood calcium (may not always cause stones)</li>
+                            <li>Hypercalciuria: high urine calcium (direct cause of calcium stones)</li>
+                            <li>Hyperuricemia: high uric acid (causes uric acid stones, not calcium)</li>
+                            <li>Hyperoxaluria: high oxalate (causes calcium oxalate stones)</li>
+                            <li>Question asks for "increased calcium in urine" → Hypercalciuria → Answer: B</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Remember "calci-uria" = calcium in urine. "Oxal-uria" = oxalate in urine. "Uric-emia" = uric acid in blood.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>ESWL: Extracorporeal shock wave lithotripsy for stones < 2 cm</li>
+                        <li>PCNL: Percutaneous nephrolithotomy for larger stones (> 2 cm)</li>
+                        <li>Staghorn calculus: Branched stone filling renal pelvis/calyces (struvite)</li>
+                        <li>UTI treatment: Antibiotics (trimethoprim-sulfa, nitrofurantoin)</li>
+                        <li>Dialysis: Hemodialysis (machine) vs Peritoneal dialysis (abdomen)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (30/40)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why do struvite stones form only in alkaline urine?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Struvite (MgNH₄PO₄) forms when urea-splitting bacteria (Proteus, Klebsiella) produce ammonia → alkaline urine. Ammonia combines with magnesium and phosphate. These are "infection stones" often staghorn shaped. Federal textbook notes: "When urine is alkaline (high pH) the stone is of calcium phosphate" (similar principle).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the difference between acute and chronic renal failure?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> <strong>Acute:</strong> Sudden onset (hours-days), often reversible, causes: obstruction, trauma, toxins. <strong>Chronic:</strong> Gradual (months-years), irreversible, causes: diabetes, hypertension, glomerulonephritis. Federal textbook: "Acute renal failure may be caused by: (a) Haemorrhage due to trauma. (b) Vomiting, diarrhoea..." KPK textbook: "Chronic kidney failure, also called chronic kidney disease is the gradual loss of kidney function."</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Urinary Disorders MCQs Progress</div>
+                    <div class="progress-stats"><span id="disorders-completed">0</span>/12 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="disorders-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-exclamation-triangle"></i> Urinary Disorders MCQs (12)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-disorders">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="disorders-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Kidney Transplant Tab -->
+        <div class="tab-content" id="transplant-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="explanation-title">Kidney Transplantation and Medical Ethics</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Kidney Transplant Principles:</h4>
+                    <p>Transplantation is treatment for end-stage renal disease (ESRD). Donor kidney placed in iliac fossa (pelvis), connected to iliac vessels. Native kidneys usually left in place unless causing infection/hypertension.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Compatibility Requirements</div>
+                        <p>Three key matches needed: 1) <strong>Blood type</strong> (ABO compatible), 2) <strong>HLA matching</strong> (human leukocyte antigens, 6 major types), 3) <strong>Negative cross-match</strong> (no antibodies against donor). Better HLA match = lower rejection risk.</p>
+                    </div>
+                    
+                    <div class="equation">
+                        $\text{HLA match: 6 antigens (A, B, DR). Match ≥3 antigens for better outcome}$
+                    </div>
+                    
+                    <h4>Transplant Procedure and Issues:</h4>
+                    <table style="width:100%; border-collapse: collapse; margin: 9.72px 0; font-size: 0.486rem;">
+                        <tr style="background: var(--primary); color: white;">
+                            <th style="padding: 4.05px; text-align: left;">Aspect</th>
+                            <th style="padding: 4.05px; text-align: left;">Details</th>
+                            <th style="padding: 4.05px; text-align: left;">Significance</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Donor Sources</strong></td>
+                            <td style="padding: 4.05px;">Living related, living unrelated, cadaver</td>
+                            <td style="padding: 4.05px;">Living donor better outcomes</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Immunosuppressants</strong></td>
+                            <td style="padding: 4.05px;">Cyclosporine, tacrolimus, steroids</td>
+                            <td style="padding: 4.05px;">Prevent rejection, increase infection risk</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Rejection Types</strong></td>
+                            <td style="padding: 4.05px;">Hyperacute, acute, chronic</td>
+                            <td style="padding: 4.05px;">Timing: minutes, weeks, years</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4.05px;"><strong>Success Rate</strong></td>
+                            <td style="padding: 4.05px;">5-20+ years graft survival</td>
+                            <td style="padding: 4.05px;">Better than dialysis long-term</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Cyclosporine Revolution</div>
+                        <p>Cyclosporine (discovered 1983) revolutionized transplantation by selectively inhibiting T-cell activation. Before cyclosporine, 1-year graft survival was ~50%; after, ~85%. KPK textbook: "until the discovery of the immunosuppressive drug cyclosporine in 1983, the risk of organ rejection was very high."</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> What is the PRIMARY reason for giving immunosuppressive drugs after kidney transplantation?</p>
+                        <p><strong>Options:</strong> A) To prevent bacterial infections, B) To reduce pain, C) To prevent organ rejection, D) To improve kidney function immediately</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Federal textbook: "Patients are required to take medications such as cyclosporine etc., to suppress their immune system in order to prevent rejection of the transplanted kidney."</li>
+                            <li>KPK textbook: "With current immunosuppressive therapy the recipient of a transplanted kidney can expect to live 5 to 20 years or longer with relatively normal kidney function."</li>
+                            <li>Immunosuppressants increase infection risk (side effect, not purpose)</li>
+                            <li>They don't directly reduce pain or immediately improve function</li>
+                            <li>Primary purpose: prevent immune system from attacking foreign tissue → Answer: C</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> "Immunosuppressant" = Suppress immune system = Prevent rejection of "non-self" organ. Remember they're lifelong medications.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Living with one kidney: No disadvantage if healthy (donors live normal lives)</li>
+                        <li>Graft placement: Iliac fossa (pelvis), connected to iliac artery/vein</li>
+                        <li>Native kidneys: Usually not removed unless infected/cancerous</li>
+                        <li>Cross-match test: Mix donor/recipient blood, check for antibodies</li>
+                        <li>Rejection even years later: Can occur if medications stopped</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (35/40)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is HLA matching important for kidney transplantation?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> HLA (Human Leukocyte Antigens) are proteins on cell surfaces that identify "self". Mismatched HLAs trigger immune rejection. Better HLA match = lower rejection risk. Federal textbook: "It is usual to select donor kidneys on the basis of human leucocytes antigen (HLA) matching as this improves graft survival." Six major HLA antigens: A, B, DR (2 each).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Can a person live normally with only one kidney?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Yes, completely normal life. The remaining kidney hypertrophies (increases size) to compensate. Federal textbook: "A person can live normally with just one kidney." Kidney donors undergo rigorous screening to ensure they're healthy enough. Studies show kidney donors actually live longer than general population (healthier selection bias).</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Kidney Transplant MCQs Progress</div>
+                    <div class="progress-stats"><span id="transplant-completed">0</span>/12 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="transplant-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-heartbeat"></i> Kidney Transplant MCQs (12)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-transplant">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="transplant-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Thermoregulation Tab -->
+        <div class="tab-content" id="thermoregulation-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <div class="explanation-title">Thermoregulation in Animals and Humans</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Classification Based on Temperature Regulation:</h4>
+                    <p>Animals regulate body temperature differently based on ability and heat source.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Homeotherm vs Poikilotherm, Endotherm vs Ectotherm</div>
+                        <p><strong>Homeotherms:</strong> Maintain constant body temperature (birds, mammals). <strong>Poikilotherms:</strong> Variable body temperature (fish, amphibians, reptiles). <strong>Endotherms:</strong> Generate metabolic heat (birds, mammals). <strong>Ectotherms:</strong> Rely on environmental heat (reptiles, amphibians). Note: Some animals are homeothermic ectotherms (some fish), or poikilothermic endotherms (bats during torpor).</p>
+                    </div>
+                    
+                    <div class="equation">
+                        $\text{Human: Homeothermic endotherm (constant 37°C, metabolic heat)}$
+                    </div>
+                    
+                    <h4>Human Thermoregulatory Mechanisms:</h4>
+                    <table style="width:100%; border-collapse: collapse; margin: 9.72px 0; font-size: 0.486rem;">
+                        <tr style="background: var(--primary); color: white;">
+                            <th style="padding: 4.05px; text-align: left;">Response to Heat</th>
+                            <th style="padding: 4.05px; text-align: left;">Mechanism</th>
+                            <th style="padding: 4.05px; text-align: left;">Response to Cold</th>
+                            <th style="padding: 4.05px; text-align: left;">Mechanism</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Vasodilation</strong></td>
+                            <td style="padding: 4.05px;">↑ Blood flow to skin</td>
+                            <td style="padding: 4.05px;"><strong>Vasoconstriction</strong></td>
+                            <td style="padding: 4.05px;">↓ Blood flow to skin</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Sweating</strong></td>
+                            <td style="padding: 4.05px;">Evaporative cooling</td>
+                            <td style="padding: 4.05px;"><strong>Shivering</strong></td>
+                            <td style="padding: 4.05px;">Muscle heat production</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Behavioral</strong></td>
+                            <td style="padding: 4.05px;">Seek shade, less clothing</td>
+                            <td style="padding: 4.05px;"><strong>Piloerection</strong></td>
+                            <td style="padding: 4.05px;">Traps air (goosebumps)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4.05px;"><strong>↑ Respiration</strong></td>
+                            <td style="padding: 4.05px;">Panting (some animals)</td>
+                            <td style="padding: 4.05px;"><strong>↑ Metabolic rate</strong></td>
+                            <td style="padding: 4.05px;">Thyroxine, adrenaline</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Fever Mechanism</div>
+                        <p>Fever (pyrexia) is regulated increase in set-point by pyrogens (IL-1, TNF from macrophages). Hypothalamus raises set-point → vasoconstriction, shivering → ↑ temperature. Benefits: Enhances immune function, inhibits pathogens. Antipyretics (aspirin, paracetamol) lower set-point. KPK textbook: "Substances known as pyrogens... directly affect the hypothalamus and increase the temperature set point."</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which part of the brain acts as the thermostat for body temperature regulation?</p>
+                        <p><strong>Options:</strong> A) Cerebrum, B) Cerebellum, C) Hypothalamus, D) Medulla oblongata</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Federal textbook: "Thermoregulatory centre in human body is located in the hypothalamus which acts thermostat."</li>
+                            <li>KPK textbook: "Human have a well-developed temperature control system... an extremely sensitive control centre, the hypothalamus."</li>
+                            <li>Cerebrum: Higher functions, not temperature regulation</li>
+                            <li>Cerebellum: Coordination, balance</li>
+                            <li>Medulla: Vital reflexes (breathing, heart rate)</li>
+                            <li>Hypothalamus: Regulates temperature, hunger, thirst → Answer: C</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Hypothalamus = "Homeostasis Headquarters". Regulates temperature, water balance, hunger, sleep. Thermoreceptors in skin and hypothalamus itself monitor temperature.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Normal human temperature: 36.4-37.3°C (core), 37°C average</li>
+                        <li>Hypothermia: <35°C, Hyperthermia: >37.5°C, Fever: >38°C</li>
+                        <li>Brown adipose tissue: Non-shivering thermogenesis in infants</li>
+                        <li>Thermoreceptor types: Warm and cold receptors in skin/hypothalamus</li>
+                        <li>Behavioral thermoregulation: First response before physiological (clothing, shelter)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (40/40)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the difference between poikilotherms and ectotherms?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Poikilothermy refers to temperature variability, ectothermy refers to heat source. Poikilotherms have variable body temperature (opposite: homeotherms). Ectotherms rely on external heat (opposite: endotherms). Most reptiles are both poikilothermic and ectothermic. Some fish are homeothermic ectotherms (maintain constant temperature using behavioral means). Federal textbook distinguishes both classifications.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How does shivering generate heat?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Shivering is involuntary muscle contractions without useful work. ATP hydrolysis during muscle contraction releases heat (75% energy as heat, 25% as work). Federal textbook: "Spasmodic contraction of the muscles is called shivering. This contraction produces which helps to raise the body temperature." KPK textbook calls it "shivering thermogenesis".</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Thermoregulation MCQs Progress</div>
+                    <div class="progress-stats"><span id="thermoregulation-completed">0</span>/12 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="thermoregulation-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-thermometer-half"></i> Thermoregulation MCQs (12)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-thermoregulation">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="thermoregulation-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracking Tab -->
+        <div class="tab-content" id="progress-tab">
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-chart-line"></i> Progress Tracking</h3>
+                </div>
+                
+                <div class="explanation-section">
+                    <div class="explanation-header">
+                        <div class="explanation-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="explanation-title">Your Learning Progress</div>
+                    </div>
+                    
+                    <div class="explanation-content">
+                        <p>Track your progress through 120 MCQs and 40 Conceptual Q&A. Detailed breakdown:</p>
+                        
+                        <div class="progress-section" style="margin-top: 12.15px;">
+                            <div class="progress-header">
+                                <div class="progress-title">Overall Progress</div>
+                                <div class="progress-stats"><span id="overall-completed">0</span>/120 completed</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="overall-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px;">
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Homeostasis Introduction</div>
+                                    <div class="progress-stats"><span id="intro-summary">0</span>/12</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="intro-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Excretion Types</div>
+                                    <div class="progress-stats"><span id="excretion-summary">0</span>/12</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="excretion-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Kidney Structure</div>
+                                    <div class="progress-stats"><span id="kidney-summary">0</span>/12</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="kidney-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Nephron Function</div>
+                                    <div class="progress-stats"><span id="nephron-summary">0</span>/12</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="nephron-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Osmoregulation</div>
+                                    <div class="progress-stats"><span id="osmoregulation-summary">0</span>/12</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="osmoregulation-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Urinary Disorders</div>
+                                    <div class="progress-stats"><span id="disorders-summary">0</span>/12</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="disorders-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Kidney Transplant</div>
+                                    <div class="progress-stats"><span id="transplant-summary">0</span>/12</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="transplant-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Thermoregulation</div>
+                                    <div class="progress-stats"><span id="thermoregulation-summary">0</span>/12</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="thermoregulation-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px; text-align: center;">
+                            <button class="btn btn-primary" id="reset-progress">
+                                <i class="fas fa-redo"></i> Reset Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Homeostasis MCQs Portal. MDCAT | NUMS | HEC | AKU | Competition Exam Preparation.</p>
+                <p>Complete coverage with 120 MCQs, 40 Conceptual Q&A, and detailed explanations from Federal & KPK textbooks</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Homeostasis MCQ Data - 120 MCQs total (12 per topic × 8 topics)
+        const homeostasisMCQs = {
+            intro: [
+                {
+                    id: 1,
+                    question: "Which nitrogenous waste requires the LEAST amount of water for its excretion?",
+                    options: ["Ammonia", "Urea", "Uric acid", "Creatinine"],
+                    correctAnswer: 2,
+                    explanation: "According to Federal textbook: 1g nitrogen as ammonia needs 500 ml water, urea needs 50 ml, uric acid needs only 1 ml. Uric acid precipitates as crystals, requiring minimal water for excretion. This makes it ideal for water conservation in terrestrial animals."
+                },
+                {
+                    id: 2,
+                    question: "Homeostasis primarily refers to the maintenance of:",
+                    options: ["Constant external environment", "Stable internal environment", "Variable body temperature", "High metabolic rate"],
+                    correctAnswer: 1,
+                    explanation: "Homeostasis is the maintenance of a stable internal environment despite external changes. This includes regulation of temperature, pH, water balance, and solute concentrations. Excretion plays a crucial role by removing metabolic wastes that could disrupt this balance."
+                },
+                {
+                    id: 3,
+                    question: "Which statement about nitrogenous wastes is CORRECT according to both textbooks?",
+                    options: ["Ammonia is less toxic than urea", "Uric acid requires more water than ammonia", "Urea is 100,000 times less toxic than ammonia", "Ammonia is excreted by terrestrial mammals"],
+                    correctAnswer: 2,
+                    explanation: "Federal textbook states: 'urea, which is 100,000 times less toxic than urea' (actually meant 'than ammonia'). KPK textbook also mentions urea is less toxic. Ammonia is most toxic, uric acid least toxic. Terrestrial mammals excrete urea, not ammonia."
+                },
+                {
+                    id: 4,
+                    question: "The right kidney is slightly lower than the left kidney because of:",
+                    options: ["The diaphragm is higher on right", "The liver occupies space above right kidney", "The spleen pushes left kidney upward", "The stomach is above left kidney"],
+                    correctAnswer: 1,
+                    explanation: "Both textbooks mention the right kidney is 1.5-2.0 cm lower than left. Federal textbook teacher's point asks: 'why the left kidney is about 1.5 to 2.0 cm higher than the right one.' KPK textbook: 'the right kidney being a little lower than the left one because of a liver lobe above it.'"
+                },
+                {
+                    id: 5,
+                    question: "Which animals are typically ammonotelic?",
+                    options: ["Birds and reptiles", "Mammals and adult amphibians", "Most fishes and aquatic invertebrates", "Insects and terrestrial snails"],
+                    correctAnswer: 2,
+                    explanation: "Ammonotelic animals excrete ammonia and include most fishes, protozoans, sponges, coelenterates (Federal textbook). They have abundant water available to dilute toxic ammonia. Birds/reptiles are uricotelic, mammals/amphibians are ureotelic."
+                },
+                {
+                    id: 6,
+                    question: "What percentage of cardiac output do kidneys receive?",
+                    options: ["5-10%", "10-15%", "20-25%", "30-35%"],
+                    correctAnswer: 2,
+                    explanation: "Kidneys receive about 20-25% of cardiac output despite being only 0.5% of body weight. KPK textbook tidbit: 'The kidney receives about 20 percent of the blood coming from the heart each time it beats.' This high flow enables efficient filtration."
+                },
+                {
+                    id: 7,
+                    question: "Which is NOT a function of kidneys?",
+                    options: ["Excretion of nitrogenous wastes", "Osmoregulation", "Production of digestive enzymes", "Secretion of erythropoietin"],
+                    correctAnswer: 2,
+                    explanation: "Kidneys excrete wastes, regulate water/solute balance (osmoregulation), secrete erythropoietin (stimulates RBC production) and renin (blood pressure regulation). They do NOT produce digestive enzymes - those come from pancreas and digestive tract."
+                },
+                {
+                    id: 8,
+                    question: "The science concerned with kidney structure and function is called:",
+                    options: ["Nephrology", "Urology", "Hematology", "Endocrinology"],
+                    correctAnswer: 0,
+                    explanation: "Federal textbook: 'The science concerned with the structure, functions and diseases of the kidneys is called nephrology.' Urology deals with urinary tract diseases and treatment. Hematology is blood study, endocrinology is hormone study."
+                },
+                {
+                    id: 9,
+                    question: "Which metabolic process produces nitrogenous wastes?",
+                    options: ["Breakdown of carbohydrates only", "Breakdown of lipids only", "Breakdown of proteins and nucleic acids", "Photosynthesis"],
+                    correctAnswer: 2,
+                    explanation: "Nitrogenous wastes come from protein and nucleic acid metabolism. Carbohydrates and lipids produce CO₂ and H₂O but no nitrogen. KPK textbook: 'The most troublesome is the nitrogen-containing waste from the metabolism of proteins and nucleic acids.'"
+                },
+                {
+                    id: 10,
+                    question: "The primary nitrogenous waste in humans is:",
+                    options: ["Ammonia", "Urea", "Uric acid", "Creatinine"],
+                    correctAnswer: 1,
+                    explanation: "Humans are ureotelic - excrete primarily urea. Federal textbook notes humans excrete small amounts of uric acid from nucleic acid breakdown, not protein breakdown. Ammonia is too toxic, uric acid is for water conservation in birds/reptiles."
+                },
+                {
+                    id: 11,
+                    question: "Which factor mainly determines the type of nitrogenous waste an animal excretes?",
+                    options: ["Body size", "Metabolic rate", "Availability of water", "Diet type"],
+                    correctAnswer: 2,
+                    explanation: "Federal textbook: 'The exact nature of excretory product is determined mainly by the availability of water to the organism which is based upon its habitat.' Aquatic = ammonia, terrestrial with moderate water = urea, terrestrial with water scarcity = uric acid."
+                },
+                {
+                    id: 12,
+                    question: "Urine normally has a pH range of:",
+                    options: ["1.0-3.0", "4.8-7.5", "8.0-9.0", "10.0-12.0"],
+                    correctAnswer: 1,
+                    explanation: "Federal textbook: 'Normal urine has pH range from 4.8 to 7.5.' This slightly acidic pH helps prevent bacterial growth. Urine pH can vary with diet and health conditions. Tubular secretion of H⁺ ions regulates urine pH."
+                }
+            ],
+            excretion: [
+                {
+                    id: 1,
+                    question: "For 1g of nitrogen excretion, how much water is required for urea compared to ammonia?",
+                    options: ["Urea needs 10× more water", "Urea needs 10× less water", "Both need same amount", "Urea needs 100× less water"],
+                    correctAnswer: 1,
+                    explanation: "Federal textbook: 1g nitrogen as ammonia requires 500 ml water, as urea requires 50 ml water. So urea needs 10× less water (500/50 = 10). Uric acid needs only 1 ml water - 500× less than ammonia."
+                },
+                {
+                    id: 2,
+                    question: "Animals that excrete uric acid as their major nitrogenous waste are called:",
+                    options: ["Ammonotelic", "Ureotelic", "Uricotelic", "Guanotelic"],
+                    correctAnswer: 2,
+                    explanation: "Federal textbook: 'Animals which excrete uric acid as their major nitrogenous waste product are called uricotelics.' Examples: insects, most reptiles, birds. Ammonotelic = ammonia excreters, Ureotelic = urea excreters."
+                },
+                {
+                    id: 3,
+                    question: "Why do birds and reptiles excrete uric acid instead of urea?",
+                    options: ["Uric acid is more toxic", "Uric acid requires more energy to produce", "Uric acid conserves water and is safe in eggs", "Uric acid is more soluble"],
+                    correctAnswer: 2,
+                    explanation: "Uric acid requires only 1 ml water/g N vs 50 ml for urea. Also, uric acid precipitates as solid, safe in shelled eggs. KPK textbook: 'If an embryo released ammonia or urea within a shelled egg, the soluble waste would accumulate to toxic concentrations.'"
+                },
+                {
+                    id: 4,
+                    question: "Which animal is ureotelic according to the textbooks?",
+                    options: ["Freshwater fish", "Shark", "Bird", "Insect"],
+                    correctAnswer: 1,
+                    explanation: "Sharks (chondrichthyes) are ureotelic. KPK textbook: 'Excreted by chondrichives (sharks and rays), terrestrial amphibians and mammals.' Freshwater fish are ammonotelic, birds/insects are uricotelic."
+                },
+                {
+                    id: 5,
+                    question: "The conversion of ammonia to urea occurs primarily in which organ?",
+                    options: ["Kidneys", "Liver", "Lungs", "Muscles"],
+                    correctAnswer: 1,
+                    explanation: "Ammonia produced in tissues is transported to liver via bloodstream, where it's converted to urea via urea cycle (ornithine cycle). Kidneys excrete urea but don't synthesize it. This conversion requires ATP but conserves water."
+                },
+                {
+                    id: 6,
+                    question: "Which statement about ammonia is FALSE?",
+                    options: ["It is highly soluble in water", "It is highly toxic to cells", "It raises the pH of body fluids", "It is excreted by terrestrial mammals"],
+                    correctAnswer: 3,
+                    explanation: "Terrestrial mammals do NOT excrete ammonia - they convert it to urea. Federal textbook: 'Ammonia is highly toxic because it tends to raise the pH of body fluids and interferes with membrane transport functions. It is highly soluble... excreted rapidly.' Only aquatic animals excrete ammonia directly."
+                },
+                {
+                    id: 7,
+                    question: "What advantage does urea provide over ammonia for terrestrial animals?",
+                    options: ["Urea is more soluble", "Urea is less toxic and conserves water", "Urea provides more energy", "Urea is easier to synthesize"],
+                    correctAnswer: 1,
+                    explanation: "Urea is 100,000× less toxic than ammonia (Federal textbook) and requires only 50 ml water/g N vs 500 ml for ammonia. Though urea synthesis requires ATP, it allows terrestrial animals to conserve water while safely excreting nitrogen."
+                },
+                {
+                    id: 8,
+                    question: "Tadpoles are ammonotelic but adult frogs are ureotelic. This change occurs because:",
+                    options: ["Diet changes from herbivorous to carnivorous", "Metabolic rate increases", "Habitat changes from aquatic to semi-terrestrial", "Gills are replaced by lungs"],
+                    correctAnswer: 2,
+                    explanation: "Tadpoles live in water (aquatic) → excrete ammonia. Adult frogs live on land (semi-terrestrial) → need to conserve water → excrete urea. This correlates with habitat change during metamorphosis, not diet or organ changes per se."
+                },
+                {
+                    id: 9,
+                    question: "Which nitrogenous waste is a purine derivative?",
+                    options: ["Ammonia", "Urea", "Uric acid", "Creatinine"],
+                    correctAnswer: 2,
+                    explanation: "Federal textbook: 'Uric acid is a purine even less toxic than urea...' Uric acid is derived from purine metabolism (adenine, guanine). Humans excrete small amounts of uric acid from nucleic acid breakdown."
+                },
+                {
+                    id: 10,
+                    question: "The correlation between habitat and excretory product is:",
+                    options: ["Ammonia - terrestrial, Urea - aquatic, Uric acid - aquatic", "Ammonia - aquatic, Urea - terrestrial, Uric acid - terrestrial", "Ammonia - aquatic, Urea - aquatic/terrestrial, Uric acid - terrestrial", "Ammonia - terrestrial, Urea - terrestrial, Uric acid - aquatic"],
+                    correctAnswer: 2,
+                    explanation: "Federal textbook: 'The correlation with habitat is: (a) ammonia – aquatic (b) urea – aquatic and terrestrial (c) uric acid – terrestrial.' Some marine organisms (sharks) and all terrestrial organisms excrete urea. Terrestrial invertebrates and egg-laying vertebrates excrete uric acid."
+                },
+                {
+                    id: 11,
+                    question: "What happens to the toxicity as we go from ammonia to urea to uric acid?",
+                    options: ["Toxicity increases", "Toxicity decreases", "Toxicity remains same", "First increases then decreases"],
+                    correctAnswer: 1,
+                    explanation: "Toxicity decreases: Ammonia (most toxic) > Urea (100,000× less toxic than ammonia) > Uric acid (even less toxic than urea). This correlates with water requirement: more toxic wastes need more water for dilution."
+                },
+                {
+                    id: 12,
+                    question: "Which animal would most likely be uricotelic?",
+                    options: ["A whale", "A desert lizard", "A freshwater fish", "A dolphin"],
+                    correctAnswer: 1,
+                    explanation: "Desert lizards need maximum water conservation → uricotelic. Whales and dolphins (mammals) are ureotelic. Freshwater fish are ammonotelic. Uric acid excretion (1 ml water/g N) is ideal for arid environments."
+                }
+            ],
+            kidney: [
+                {
+                    id: 1,
+                    question: "Through which structure do the renal artery, vein, and ureter pass at the kidney?",
+                    options: ["Renal capsule", "Renal cortex", "Hilum (hilus)", "Renal pelvis"],
+                    correctAnswer: 2,
+                    explanation: "Both textbooks: hilum/hilus is where renal artery and nerves enter, renal vein and ureter exit. Federal: 'The entrance to this sinus is termed hilun (hilus), where the renal artery and nerves enter and the renal vein and the ureter exit.'"
+                },
+                {
+                    id: 2,
+                    question: "The outer region of the kidney is called:",
+                    options: ["Medulla", "Cortex", "Pelvis", "Pyramid"],
+                    correctAnswer: 1,
+                    explanation: "Federal textbook: 'The kidney is divided into an outer renal cortex and inner renal medulla...' Cortex contains renal corpuscles and convoluted tubules. Medulla contains pyramids and collecting ducts."
+                },
+                {
+                    id: 3,
+                    question: "What is the approximate length of a human kidney?",
+                    options: ["5 cm", "12 cm", "20 cm", "30 cm"],
+                    correctAnswer: 1,
+                    explanation: "KPK textbook: 'The kidneys are dark-red, slightly flattened, bean shaped organs about 12 cm long, 6 cm wide and 4 cm thick...' Federal textbook also shows kidney size in figures. Each weighs about 150 g."
+                },
+                {
+                    id: 4,
+                    question: "Which structure transports urine from kidney to urinary bladder?",
+                    options: ["Urethra", "Ureter", "Renal pelvis", "Collecting duct"],
+                    correctAnswer: 1,
+                    explanation: "Ureters are muscular tubes (25-30 cm long) transporting urine from renal pelvis to bladder. Federal: 'It transports urine from the kidney to the urinary bladder.' Urethra carries urine from bladder to outside."
+                },
+                {
+                    id: 5,
+                    question: "Why are urinary tract infections more common in females?",
+                    options: ["Female urine is less acidic", "Females drink less water", "Female urethra is shorter", "Females have weaker immune systems"],
+                    correctAnswer: 2,
+                    explanation: "Federal textbook: 'the condition is fifty times more common in women... mostly due to the shortness of the female urethra, which is 1.5 inches compared to 8 inches in men.' Shorter urethra allows easier bacterial ascent from perineum."
+                },
+                {
+                    id: 6,
+                    question: "The act of emptying the urinary bladder is called:",
+                    options: ["Defecation", "Micturition", "Emiction", "Urination"],
+                    correctAnswer: 1,
+                    explanation: "KPK textbook: 'The act of emptying the bladder is called micturition.' This is controlled by internal (involuntary) and external (voluntary) sphincters. Urination is common term but micturition is medical term."
+                },
+                {
+                    id: 7,
+                    question: "Which part of the kidney contains the renal pyramids?",
+                    options: ["Cortex", "Medulla", "Pelvis", "Hilum"],
+                    correctAnswer: 1,
+                    explanation: "Federal textbook: 'The renal medulla consists of a number of cone-shaped renal pyramids.' KPK textbook also shows pyramids in medulla. Pyramids contain collecting ducts and loops of Henle, drain into minor calyces."
+                },
+                {
+                    id: 8,
+                    question: "What is the function of the urinary bladder?",
+                    options: ["Produce urine", "Filter blood", "Store urine", "Reabsorb water"],
+                    correctAnswer: 2,
+                    explanation: "Urinary bladder stores urine (capacity 400-600 ml). Federal: 'It serves as urine reservoir.' KPK: 'It can store about 1/3 litre of urine.' Urine production occurs in kidneys, filtration in nephrons."
+                },
+                {
+                    id: 9,
+                    question: "The renal pelvis leads directly into the:",
+                    options: ["Urethra", "Ureter", "Bladder", "Calyces"],
+                    correctAnswer: 1,
+                    explanation: "Renal pelvis collects urine from major calyces and funnels it into ureter. Federal: 'Urine is collected in the renal pelvis and exit the kidney through ureter.' Calyces drain into pelvis, not vice versa."
+                },
+                {
+                    id: 10,
+                    question: "Which statement about kidney position is CORRECT?",
+                    options: ["Left kidney is lower than right", "Both kidneys are at same level", "Right kidney is lower than left", "Kidneys are in thoracic cavity"],
+                    correctAnswer: 2,
+                    explanation: "Right kidney is 1.5-2.0 cm lower than left due to liver. Federal teacher's point asks why left kidney is higher. KPK: 'the right kidney being a little lower than the left one because of a liver lobe above it.'"
+                },
+                {
+                    id: 11,
+                    question: "The male urethra differs from female urethra in that it:",
+                    options: ["Is shorter", "Carries only urine", "Is not connected to bladder", "Carries both urine and semen"],
+                    correctAnswer: 3,
+                    explanation: "KPK textbook: 'In male, urethra is about 20 cm long and carries urine as well as the spermatic fluid.' Female urethra is 3-4 cm and carries only urine. Male urethra has prostatic, membranous, and spongy parts."
+                },
+                {
+                    id: 12,
+                    question: "What protects the kidneys physically?",
+                    options: ["Ribs and perirenal fat", "Skull bones", "Pelvic bones", "Sternum"],
+                    correctAnswer: 0,
+                    explanation: "Kidneys are partially protected by 11th and 12th ribs posteriorly. They also have perirenal fat cushion. KPK: 'The upper parts of the kidneys are partially protected by the eleventh and twelfth ribs.' They're retroperitoneal (behind peritoneum)."
+                }
+            ],
+            nephron: [
+                {
+                    id: 1,
+                    question: "The functional unit of the kidney is the:",
+                    options: ["Nephron", "Glomerulus", "Pyramid", "Calyx"],
+                    correctAnswer: 0,
+                    explanation: "Federal textbook: 'The nephron is the functional unit of kidney.' Each kidney has ~1 million nephrons. Glomerulus is part of nephron. Pyramids and calyces are collecting structures."
+                },
+                {
+                    id: 2,
+                    question: "Which part of the nephron contains the glomerulus?",
+                    options: ["Renal tubule", "Renal corpuscle", "Loop of Henle", "Collecting duct"],
+                    correctAnswer: 1,
+                    explanation: "Federal: 'A nephron consists of a renal corpuscle and a renal tubule. A renal corpuscle is composed of a network of capillaries called glomerulus which is surrounded by... Bowman's capsule.' Renal corpuscle = glomerulus + Bowman's capsule."
+                },
+                {
+                    id: 3,
+                    question: "Where does most selective reabsorption occur in the nephron?",
+                    options: ["Glomerulus", "Proximal convoluted tubule", "Distal convoluted tubule", "Collecting duct"],
+                    correctAnswer: 1,
+                    explanation: "KPK textbook: 'Over 80% of the glomerular filtrate is reabsorbed in proximal convoluted tubules.' Federal also indicates PCT reabsorbs glucose, amino acids, vitamins, salts, water. PCT has microvilli increasing surface area."
+                },
+                {
+                    id: 4,
+                    question: "What is the function of the loop of Henle?",
+                    options: ["Filtration of blood", "Reabsorption of glucose", "Creation of osmotic gradient", "Secretion of drugs"],
+                    correctAnswer: 2,
+                    explanation: "Loop of Henle creates osmotic gradient in medulla via countercurrent multiplier system. KPK: 'The function of loop of Henle is to conserve water.' Federal: 'formation of hypertonic urine is dependent on the reabsorption of water from the loop of Henle.'"
+                },
+                {
+                    id: 5,
+                    question: "Which cells in Bowman's capsule have foot processes called pedicels?",
+                    options: ["Podocytes", "Macula densa cells", "Juxtaglomerular cells", "Mesangial cells"],
+                    correctAnswer: 0,
+                    explanation: "Podocytes are specialized epithelial cells with foot processes forming filtration slits. KPK: 'The cells of Bowman's capsule... are called podocytes.' They wrap around glomerular capillaries, form part of filtration barrier."
+                },
+                {
+                    id: 6,
+                    question: "What percentage of nephrons are juxtamedullary?",
+                    options: ["5-10%", "20-30%", "50-60%", "70-80%"],
+                    correctAnswer: 1,
+                    explanation: "Federal textbook: 'These types of nephrons are relatively rare and only comprise 20-30% of the nephrons in the human kidney.' Cortical nephrons are 70-80%. Juxtamedullary nephrons have long loops creating medullary gradient."
+                },
+                {
+                    id: 7,
+                    question: "The vasa recta are associated with which part of the nephron?",
+                    options: ["Glomerulus", "Proximal tubule", "Loop of Henle", "Distal tubule"],
+                    correctAnswer: 2,
+                    explanation: "Vasa recta are capillaries parallel to Loop of Henle for countercurrent exchange. Federal: 'Specialized part of the peritubular capillaries called vasa recta course into the medulla along with the loops Henle.' They maintain osmotic gradient."
+                },
+                {
+                    id: 8,
+                    question: "Which structure is NOT part of the renal tubule?",
+                    options: ["Proximal convoluted tubule", "Loop of Henle", "Distal convoluted tubule", "Glomerulus"],
+                    correctAnswer: 3,
+                    explanation: "Glomerulus is part of renal corpuscle, not renal tubule. Renal tubule = PCT → Loop of Henle → DCT → Collecting duct. Federal clearly diagrams this. Glomerulus is capillary network for filtration."
+                },
+                {
+                    id: 9,
+                    question: "What is the main function of the distal convoluted tubule?",
+                    options: ["Bulk reabsorption", "Filtration", "Fine-tuning and secretion", "Urine storage"],
+                    correctAnswer: 2,
+                    explanation: "DCT fine-tunes composition: reabsorbs Na⁺, Ca²⁺, water; secretes K⁺, H⁺, drugs. KPK: 'The distal convoluted tubules have osmoregulatory role and also control blood pH by secreting hydrogen ions.' Bulk reabsorption occurs in PCT."
+                },
+                {
+                    id: 10,
+                    question: "Which arteriole has a smaller diameter to create high glomerular pressure?",
+                    options: ["Afferent arteriole", "Efferent arteriole", "Both same diameter", "Interlobular arteriole"],
+                    correctAnswer: 1,
+                    explanation: "Efferent arteriole has smaller diameter than afferent → creates high hydrostatic pressure in glomerulus for filtration. Federal: 'Efferent arterioles have somewhat less diameter than that of the afferent vessel. Therefore, a considerable blood pressure is developed in glomerulus.'"
+                },
+                {
+                    id: 11,
+                    question: "Where does the filtrate from nephrons finally empty?",
+                    options: ["Renal artery", "Renal vein", "Renal pelvis", "Urinary bladder"],
+                    correctAnswer: 2,
+                    explanation: "Collecting ducts → minor calyces → major calyces → renal pelvis → ureter. Federal: 'Many collecting ducts combine together to form larger collecting ducts which empty into minor calyces through an opening in renal papilla.'"
+                },
+                {
+                    id: 12,
+                    question: "What is the role of juxtaglomerular apparatus?",
+                    options: ["Filtration", "Reabsorption", "Secretion of renin", "Concentration of urine"],
+                    correctAnswer: 2,
+                    explanation: "Juxtaglomerular apparatus (JG cells + macula densa) secretes renin in response to low BP, low Na⁺. Renin activates angiotensin → aldosterone → Na⁺/water retention. Not directly involved in filtration/reabsorption."
+                }
+            ],
+            osmoregulation: [
+                {
+                    id: 1,
+                    question: "Which hormone increases water permeability of collecting ducts?",
+                    options: ["Aldosterone", "ADH (vasopressin)", "Renin", "ANP"],
+                    correctAnswer: 1,
+                    explanation: "ADH (anti-diuretic hormone/vasopressin) increases water permeability of collecting ducts by inserting aquaporin-2 channels. Federal: 'water passes out... promoted by anti-diuretic hormone.' KPK: 'ADH opens water channels in collecting ducts.'"
+                },
+                {
+                    id: 2,
+                    question: "Where is ADH produced and released from?",
+                    options: ["Adrenal cortex - released by kidneys", "Hypothalamus - released by posterior pituitary", "Kidneys - released into urine", "Liver - released into blood"],
+                    correctAnswer: 1,
+                    explanation: "ADH produced in hypothalamus (supraoptic nuclei), stored/released from posterior pituitary. Federal: 'anti-diuretic hormone which is secreted from posterior lobe of pituitary.' KPK also mentions hypothalamus directs pituitary to release ADH."
+                },
+                {
+                    id: 3,
+                    question: "What stimulates ADH release?",
+                    options: ["High blood volume", "Low blood osmolarity", "High blood pressure", "Dehydration (high blood osmolarity)"],
+                    correctAnswer: 3,
+                    explanation: "ADH release stimulated by: 1) ↑ blood osmolarity (dehydration), 2) ↓ blood volume/pressure. KPK: 'When body is deficient in water, hypothalamus detects a fall in blood solute potential and directs pituitary to release ADH.' (Actually detects ↑ osmolarity)"
+                },
+                {
+                    id: 4,
+                    question: "Aldosterone primarily acts on which part of nephron?",
+                    options: ["Glomerulus", "Proximal tubule", "Loop of Henle", "Distal tubule and collecting duct"],
+                    correctAnswer: 3,
+                    explanation: "Aldosterone acts on principal cells of DCT and collecting duct → ↑ Na⁺ reabsorption, ↑ K⁺ secretion. Federal: 'This movement is controlled by aldosterone (adrenal cortical hormone).' KPK: 'Aldosterone activates sodium-potassium pumps in the distal convoluted tubules.'"
+                },
+                {
+                    id: 5,
+                    question: "What is the countercurrent multiplier system?",
+                    options: ["Blood flow in vasa recta", "Filtration in glomerulus", "Loop of Henle creating osmotic gradient", "Reabsorption in PCT"],
+                    correctAnswer: 2,
+                    explanation: "Countercurrent multiplier = Loop of Henle creating medullary osmotic gradient (300→1200 mOsm). Ascending limb active NaCl transport, descending limb water permeability. Federal: 'This is achieved by countercurrent multiplier mechanism.'"
+                },
+                {
+                    id: 6,
+                    question: "Which condition would result in production of large volumes of dilute urine?",
+                    options: ["Dehydration", "High ADH levels", "Overhydration (excess water intake)", "Low blood pressure"],
+                    correctAnswer: 2,
+                    explanation: "Overhydration → ↓ ADH release → collecting ducts impermeable to water → dilute urine. KPK: 'When there is a high intake of water anti diuretic hormone release is inhibited. Less water is absorbed and a large volume of dilute urine is excreted.'"
+                },
+                {
+                    id: 7,
+                    question: "Renin is secreted by which cells?",
+                    options: ["Podocytes", "Macula densa cells", "Juxtaglomerular cells", "Principal cells"],
+                    correctAnswer: 2,
+                    explanation: "Juxtaglomerular cells (modified smooth muscle in afferent arteriole) secrete renin. Renin converts angiotensinogen → angiotensin I. Part of RAAS (renin-angiotensin-aldosterone system) for BP/volume regulation."
+                },
+                {
+                    id: 8,
+                    question: "Which limb of Loop of Henle is impermeable to water?",
+                    options: ["Descending limb", "Ascending limb", "Both limbs", "Neither limb"],
+                    correctAnswer: 1,
+                    explanation: "Ascending limb is impermeable to water but actively transports NaCl. Descending limb is permeable to water, not NaCl. This difference creates osmotic gradient. KPK: 'The wall of ascending limb is impermeable to water... The descending limb is highly permeable to water.'"
+                },
+                {
+                    id: 9,
+                    question: "Atrial natriuretic peptide (ANP) has what effect on water excretion?",
+                    options: ["Decreases water excretion", "Increases water excretion", "No effect on water", "Only affects Na⁺ not water"],
+                    correctAnswer: 1,
+                    explanation: "ANP (from heart atria) promotes Na⁺ and water excretion → ↓ blood volume/pressure. Opposite of aldosterone/ADH. ANP inhibits renin, aldosterone, ADH. Not mentioned in textbooks but important for competition."
+                },
+                {
+                    id: 10,
+                    question: "What is the normal glomerular filtration rate (GFR) in humans?",
+                    options: ["25 ml/min", "125 ml/min", "500 ml/min", "1000 ml/min"],
+                    correctAnswer: 1,
+                    explanation: "Normal GFR ≈ 125 ml/min (180 L/day). KPK: 'Ultrafiltration produces about 125 ml of glomerular filtrate per minute in humans. This is equivalent to about 180 liters per day.' About 99% reabsorbed, 1.5 L urine/day."
+                },
+                {
+                    id: 11,
+                    question: "Which ion is actively transported out of ascending limb of Loop of Henle?",
+                    options: ["Na⁺", "K⁺", "Ca²⁺", "HCO₃⁻"],
+                    correctAnswer: 0,
+                    explanation: "NaCl actively transported out of thick ascending limb (Na⁺-K⁺-2Cl⁻ cotransporter). Creates dilute filtrate in ascending limb, concentrated interstitium. Federal: 'sodium chloride is transported actively out of the limb into the surrounding area.'"
+                },
+                {
+                    id: 12,
+                    question: "Why are kidneys called osmoregulatory organs?",
+                    options: ["They only excrete wastes", "They regulate water/solute balance", "They produce hormones", "They filter blood"],
+                    correctAnswer: 1,
+                    explanation: "Kidneys regulate water and solute balance (osmoregulation), not just excrete wastes. Federal: 'Being osmoregulatory organ, these are concern with the formation of dilute urine during the state of flooding and form concentrated urine during the state of dehydration.'"
+                }
+            ],
+            disorders: [
+                {
+                    id: 1,
+                    question: "Which bacteria is the most common cause of urinary tract infections?",
+                    options: ["Staphylococcus aureus", "Escherichia coli", "Pseudomonas aeruginosa", "Mycobacterium tuberculosis"],
+                    correctAnswer: 1,
+                    explanation: "E. coli causes 80% of UTIs. Federal textbook table lists E. coli first. KPK: 'The bacterial strains that cause most common type of UTIs include: Escherichia coli...' E. coli from colon ascends urethra, especially in females."
+                },
+                {
+                    id: 2,
+                    question: "What is the most common type of kidney stone?",
+                    options: ["Uric acid stones", "Cystine stones", "Calcium oxalate stones", "Struvite stones"],
+                    correctAnswer: 2,
+                    explanation: "Calcium oxalate stones account for 70% of cases. Federal: 'calcium oxalate type of kidney stones which are present in 70% of Kidney stone patient.' KPK: 'The most common type of kidney stone contains calcium in combination with either oxalate or phosphate (70% of all stones).'"
+                },
+                {
+                    id: 3,
+                    question: "Which condition is characterized by high calcium in urine?",
+                    options: ["Hypercalcemia", "Hypercalciuria", "Hyperuricemia", "Hyperoxaluria"],
+                    correctAnswer: 1,
+                    explanation: "Hypercalciuria = high urine calcium. Federal: 'high calcium in the urine, the hypercalciuria.' Hypercalcemia = high blood calcium. Hyperuricemia = high uric acid. Hyperoxaluria = high oxalate."
+                },
+                {
+                    id: 4,
+                    question: "What is the treatment using sound waves to break kidney stones?",
+                    options: ["PCNL", "ESWL", "Dialysis", "Lithotomy"],
+                    correctAnswer: 1,
+                    explanation: "ESWL = Extracorporeal Shock Wave Lithotripsy. Federal: 'Extracorporeal shock wave lithotripsy (ESWL)... an instrument called lithotripter is used to generate shock waves.' For stones < 2 cm. PCNL for larger stones."
+                },
+                {
+                    id: 5,
+                    question: "Which type of UTI involves infection of the kidney?",
+                    options: ["Urethritis", "Cystitis", "Pyelonephritis", "Prostatitis"],
+                    correctAnswer: 2,
+                    explanation: "Pyelonephritis = kidney infection (serious). Federal: 'if the kidneys are infected the infection is called pyelonephritis.' Cystitis = bladder, Urethritis = urethra. Can cause fever, flank pain."
+                },
+                {
+                    id: 6,
+                    question: "What is the irreversible deterioration of kidney function called?",
+                    options: ["Acute renal failure", "Chronic renal failure", "Glomerulonephritis", "Pyelonephritis"],
+                    correctAnswer: 1,
+                    explanation: "Chronic renal failure is irreversible, gradual loss. Federal: 'Chronic renal failure is the irreversible deterioration in renal function.' Acute is sudden, potentially reversible. Caused by diabetes, hypertension, etc."
+                },
+                {
+                    id: 7,
+                    question: "Which stone type forms in alkaline urine due to infection?",
+                    options: ["Calcium oxalate", "Uric acid", "Cystine", "Struvite"],
+                    correctAnswer: 3,
+                    explanation: "Struvite (MgNH₄PO₄) forms in alkaline urine from urea-splitting bacteria (Proteus, Klebsiella). KPK: 'Kidney stones can also result from infection in the urinary tract; these are known as struvite or infection stones (15-20% of all stones).'"
+                },
+                {
+                    id: 8,
+                    question: "End-stage renal disease (ESRD) requires which treatment?",
+                    options: ["Antibiotics only", "Pain medications", "Dialysis or transplant", "Increased fluid intake"],
+                    correctAnswer: 2,
+                    explanation: "ESRD (GFR < 15 ml/min) requires dialysis or transplant. Federal: 'Chronic kidney failure can progress to end-stage renal disease (ESRD) and uremia, which is fatal unless artificial filtering (dialysis) or a kidney transplant.'"
+                },
+                {
+                    id: 9,
+                    question: "Hyperuricemia can lead to which type of kidney stone?",
+                    options: ["Calcium oxalate", "Calcium phosphate", "Uric acid", "Cystine"],
+                    correctAnswer: 2,
+                    explanation: "Hyperuricemia = high blood uric acid → uric acid stones (5-10% of stones). Federal: 'Hyperuricemia is the increased amount of uric acid in the blood and it causes uric acid type.' Common in gout, high protein diet."
+                },
+                {
+                    id: 10,
+                    question: "Which is a symptom of kidney stones?",
+                    options: ["Painless hematuria", "Severe flank pain radiating to groin", "Increased urine output", "Low blood pressure"],
+                    correctAnswer: 1,
+                    explanation: "Kidney stones cause severe colicky pain as stone moves: flank → groin. KPK: 'they can cause sudden, severe pain as they travel from the kidneys to the bladder. Usually pain appears at side belly or groin...' May cause hematuria (blood in urine)."
+                },
+                {
+                    id: 11,
+                    question: "What is the difference between acute and chronic renal failure?",
+                    options: ["Only acute is treatable", "Acute is sudden, chronic is gradual", "Only chronic requires dialysis", "Acute affects only elderly"],
+                    correctAnswer: 1,
+                    explanation: "Acute: sudden (hours-days), often reversible. Chronic: gradual (months-years), irreversible. Federal lists causes of each. KPK: 'Chronic kidney failure... is the gradual loss of kidney function.'"
+                },
+                {
+                    id: 12,
+                    question: "Which treatment involves inserting a tube through the back into kidney for stone removal?",
+                    options: ["ESWL", "PCNL", "Dialysis", "Open surgery"],
+                    correctAnswer: 1,
+                    explanation: "PCNL = Percutaneous Nephrolithotomy. Federal: 'PCNL is preferred in which a tube is inserted from the patient's back into the kidney to create a tract.' For large stones (> 2 cm), staghorn stones."
+                }
+            ],
+            transplant: [
+                {
+                    id: 1,
+                    question: "What is the primary purpose of immunosuppressive drugs after transplant?",
+                    options: ["Prevent infections", "Reduce pain", "Prevent organ rejection", "Improve kidney function immediately"],
+                    correctAnswer: 2,
+                    explanation: "Immunosuppressants (cyclosporine, etc.) suppress immune system to prevent rejection of foreign tissue. Federal: 'to suppress their immune system in order to prevent rejection of the transplanted kidney.' Increased infection risk is side effect."
+                },
+                {
+                    id: 2,
+                    question: "Which matching is most important for kidney transplant success?",
+                    options: ["Blood type only", "HLA matching only", "Both blood type and HLA", "Neither is important"],
+                    correctAnswer: 2,
+                    explanation: "Need both: 1) ABO blood type compatibility, 2) HLA matching. Federal: 'AEO blood group compatibility between donor and recipient is essential. It is usual to select donor kidneys on the basis of human leucocytes antigen (HLA) matching...'"
+                },
+                {
+                    id: 3,
+                    question: "Where is the transplanted kidney placed in the recipient's body?",
+                    options: ["Same location as native kidneys", "Abdominal cavity near liver", "Pelvic region (iliac fossa)", "Chest cavity"],
+                    correctAnswer: 2,
+                    explanation: "Transplanted kidney placed in pelvic region (iliac fossa), connected to iliac vessels. Federal: 'The new kidney is placed in the lower abdomen... attached easily to a large artery (femoral artery).' Native kidneys usually left in place."
+                },
+                {
+                    id: 4,
+                    question: "Can a person live normally with only one kidney?",
+                    options: ["No, life expectancy is reduced", "Yes, completely normal life", "Only with medical supervision", "Only if remaining kidney is from family member"],
+                    correctAnswer: 1,
+                    explanation: "Yes, normal life with one healthy kidney. Remaining kidney hypertrophies. Federal: 'A person can live normally with just one kidney.' Kidney donors undergo screening, live normal lives."
+                },
+                {
+                    id: 5,
+                    question: "What discovery in 1983 revolutionized kidney transplantation?",
+                    options: ["Antibiotics", "Cyclosporine", "Dialysis machines", "Blood typing"],
+                    correctAnswer: 1,
+                    explanation: "Cyclosporine (immunosuppressant) discovered 1983 dramatically improved transplant success. KPK: 'until the discovery of the immunosuppressive drug cyclosporine in 1983, the risk of organ rejection was very high.'"
+                },
+                {
+                    id: 6,
+                    question: "What is a 'negative cross-match' in transplantation?",
+                    options: ["Donor and recipient have same blood type", "Recipient has no antibodies against donor", "HLA match is perfect", "Donor is living relative"],
+                    correctAnswer: 1,
+                    explanation: "Negative cross-match = recipient has no antibodies against donor tissue. Federal: 'the donor's blood must not initiate an antibody response with the recipient's blood (called a negative cross match).' Tested by mixing blood samples."
+                },
+                {
+                    id: 7,
+                    question: "Why are native kidneys usually not removed during transplant?",
+                    options: ["Too dangerous to remove", "They continue to function", "They may be needed later", "Surgery is simpler"],
+                    correctAnswer: 0,
+                    explanation: "Native kidneys usually left unless causing infection/hypertension. Federal: 'The old kidneys are left in place and they do not harm. The existing kidneys are removed only if they cause persistent infection or high blood pressure.'"
+                },
+                {
+                    id: 8,
+                    question: "How long can a transplanted kidney function with immunosuppressants?",
+                    options: ["1-2 years", "5-20+ years", "Only a few months", "Lifelong without medications"],
+                    correctAnswer: 1,
+                    explanation: "With current immunosuppressants, transplanted kidney can function 5-20+ years. KPK: 'With current immunosuppressive therapy the recipient of a transplanted kidney can expect to live 5 to 20 years or longer with relatively normal kidney function.'"
+                },
+                {
+                    id: 9,
+                    question: "What happens if a transplant recipient stops immunosuppressants?",
+                    options: ["Nothing, kidney continues working", "Kidney may be rejected even years later", "Only risk is infection", "Body adapts and doesn't need them"],
+                    correctAnswer: 1,
+                    explanation: "Rejection can occur if immunosuppressants stopped, even years after transplant. Federal: 'If at any point a recipient stops taking the medications, rejection can occur; even ten or fifteen years after the transplant.' Lifelong medication needed."
+                },
+                {
+                    id: 10,
+                    question: "Which was the first successful kidney transplant?",
+                    options: ["Between unrelated donors", "Between identical twins", "From cadaver to living recipient", "Using animal kidneys"],
+                    correctAnswer: 1,
+                    explanation: "First successful transplant: between identical twin brothers in 1954 (Boston). KPK: 'The first successful kidney transplantation took place between identical twin brothers in 1954.' Identical twins have same HLA → no rejection."
+                },
+                {
+                    id: 11,
+                    question: "What is the main risk of transplantation surgery?",
+                    options: ["Rejection and infection", "Kidney stones", "High blood pressure", "Diabetes"],
+                    correctAnswer: 0,
+                    explanation: "Main risks: surgical complications (bleeding, infection), rejection, side effects of immunosuppressants (infection, cancer risk). Federal: 'The two problems are rejection and toxic effects of cyclosporine.'"
+                },
+                {
+                    id: 12,
+                    question: "Why might someone need a kidney transplant?",
+                    options: ["For temporary kidney dysfunction", "End-stage renal disease (ESRD)", "Minor urinary infection", "To improve athletic performance"],
+                    correctAnswer: 1,
+                    explanation: "Transplant for ESRD (GFR < 15 ml/min). Federal: 'Patients with end-stage renal failure are candidates for transplantation.' Frees from dialysis. Not for temporary issues or minor conditions."
+                }
+            ],
+            thermoregulation: [
+                {
+                    id: 1,
+                    question: "Which part of the brain acts as the body's thermostat?",
+                    options: ["Cerebrum", "Cerebellum", "Hypothalamus", "Medulla oblongata"],
+                    correctAnswer: 2,
+                    explanation: "Hypothalamus is thermoregulatory center. Federal: 'Thermoregulatory centre in human body is located in the hypothalamus which acts thermostat.' KPK: 'an extremely sensitive control centre, the hypothalamus.'"
+                },
+                {
+                    id: 2,
+                    question: "Animals that maintain constant body temperature are called:",
+                    options: ["Poikilotherms", "Homeotherms", "Ectotherms", "Heterotherms"],
+                    correctAnswer: 1,
+                    explanation: "Homeotherms maintain constant temperature (birds, mammals). Poikilotherms have variable temperature. Federal: 'Homeotherms are birds and mammals which are able to maintain a fairly constant body temperature.'"
+                },
+                {
+                    id: 3,
+                    question: "Which mechanism increases heat loss during overheating?",
+                    options: ["Vasoconstriction", "Shivering", "Vasodilation and sweating", "Piloerection"],
+                    correctAnswer: 2,
+                    explanation: "Vasodilation (↑ blood flow to skin) and sweating (evaporative cooling) increase heat loss. Federal: 'There are two main physiology responses to heat, vasodilation and sweating.' Vasoconstriction and shivering conserve/generate heat."
+                },
+                {
+                    id: 4,
+                    question: "What is shivering thermogenesis?",
+                    options: ["Heat production from brown fat", "Involuntary muscle contractions generating heat", "Behavioral response to cold", "Heat loss through evaporation"],
+                    correctAnswer: 1,
+                    explanation: "Shivering = involuntary muscle contractions producing heat. Federal: 'Spasmodic contraction of the muscles is called shivering. This contraction produces which helps to raise the body temperature.' KPK calls it 'shivering thermogenesis.'"
+                },
+                {
+                    id: 5,
+                    question: "Which animals are typically ectotherms?",
+                    options: ["Birds and mammals", "Reptiles and amphibians", "Only mammals", "Only birds"],
+                    correctAnswer: 1,
+                    explanation: "Ectotherms rely on external heat (reptiles, amphibians, fish, invertebrates). Federal: 'Examples are most invertebrates, fishes, amphibians and reptiles.' Endotherms generate metabolic heat (birds, mammals)."
+                },
+                {
+                    id: 6,
+                    question: "What causes 'goosebumps' or piloerection?",
+                    options: ["Heat exposure", "Contraction of hair erector muscles", "Sweat gland activation", "Vasodilation"],
+                    correctAnswer: 1,
+                    explanation: "Piloerection (goosebumps) = hair erector muscles contract, trapping air for insulation. Federal: 'Piloerection literally means \"erection of skin hair\". It traps air in the erected hair while insulator for the heat.'"
+                },
+                {
+                    id: 7,
+                    question: "What is the normal human core body temperature range?",
+                    options: ["34-35°C", "36.4-37.3°C", "38-39°C", "40-41°C"],
+                    correctAnswer: 1,
+                    explanation: "Normal core temperature: 36.4-37.3°C (approx 37°C). KPK: 'Core body temperature... should be maintained between 36.4 and 37.3 °C.' Hypothermia <35°C, fever >38°C, hyperthermia >37.5°C."
+                },
+                {
+                    id: 8,
+                    question: "How does fever differ from hyperthermia?",
+                    options: ["Fever is always harmful", "Fever is regulated increase in set-point", "Hyperthermia is always beneficial", "They are the same condition"],
+                    correctAnswer: 1,
+                    explanation: "Fever = regulated increase in hypothalamic set-point by pyrogens (IL-1, TNF). Hyperthermia = unregulated temperature increase (heat stroke). KPK: 'An increase in core temperature is known as fever or pyrexia.'"
+                },
+                {
+                    id: 9,
+                    question: "Which hormone increases metabolic rate for heat production?",
+                    options: ["Insulin", "Thyroxine", "Estrogen", "Parathyroid hormone"],
+                    correctAnswer: 1,
+                    explanation: "Thyroxine (thyroid hormone) increases metabolic rate → heat production (non-shivering thermogenesis). KPK: 'Thyroxin, a thyroid hormone increases metabolic rate which result in heat production. Its effects are long term.'"
+                },
+                {
+                    id: 10,
+                    question: "What is the primary source of heat in endotherms?",
+                    options: ["Environmental heat", "Metabolic heat production", "Behavioral adaptations only", "Solar radiation"],
+                    correctAnswer: 1,
+                    explanation: "Endotherms generate heat internally through metabolism. Federal: 'Endotherms animals produce their own body heat through heat production as by-product due metabolism in muscles, or by the action of hormones that increase metabolic rate.'"
+                },
+                {
+                    id: 11,
+                    question: "Which response occurs in cold temperatures?",
+                    options: ["Vasodilation and sweating", "Vasoconstriction and shivering", "Panting and vasodilation", "Decreased metabolic rate"],
+                    correctAnswer: 1,
+                    explanation: "Cold responses: vasoconstriction (reduce heat loss), shivering (generate heat), piloerection, ↑ metabolic rate. Federal lists these. Heat responses are opposite."
+                },
+                {
+                    id: 12,
+                    question: "What happens during vasodilation in thermoregulation?",
+                    options: ["Blood vessels constrict, reducing heat loss", "Blood vessels dilate, increasing heat loss", "Sweat glands are inhibited", "Metabolic rate decreases"],
+                    correctAnswer: 1,
+                    explanation: "Vasodilation = arterioles dilate → ↑ blood flow to skin → ↑ heat loss by radiation/convection. Federal: 'Vasodilation is the expansion of blood capillarity which lie just beneath the epidermis... So there is more flow of the blood in the capillaries of the skin.'"
+                }
+            ]
+        };
+
+        // Progress tracking
+        let progress = {
+            intro: Array(homeostasisMCQs.intro.length).fill(false),
+            excretion: Array(homeostasisMCQs.excretion.length).fill(false),
+            kidney: Array(homeostasisMCQs.kidney.length).fill(false),
+            nephron: Array(homeostasisMCQs.nephron.length).fill(false),
+            osmoregulation: Array(homeostasisMCQs.osmoregulation.length).fill(false),
+            disorders: Array(homeostasisMCQs.disorders.length).fill(false),
+            transplant: Array(homeostasisMCQs.transplant.length).fill(false),
+            thermoregulation: Array(homeostasisMCQs.thermoregulation.length).fill(false)
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the application
+            initApp();
+            
+            function initApp() {
+                // Set up event listeners for welcome screen
+                document.getElementById('start-btn').addEventListener('click', () => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                });
+                
+                // Hide welcome animation after delay
+                setTimeout(() => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                }, 5000);
+                
+                // Load progress from localStorage
+                loadProgress();
+                
+                // Set up tab navigation
+                setupTabs();
+                
+                // Set up event listeners
+                setupEventListeners();
+                
+                // Load MCQs
+                loadAllMCQs();
+                
+                // Update progress display
+                updateProgress();
+                
+                // Apply animations
+                applyAnimations();
+                
+                // Render KaTeX equations
+                renderKaTeX();
+            }
+            
+            function setupTabs() {
+                const tabButtons = document.querySelectorAll('.nav-btn[data-tab]');
+                const tabContents = document.querySelectorAll('.tab-content');
+                
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tabId = button.getAttribute('data-tab');
+                        
+                        // Update active tab button
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        // Show active content
+                        tabContents.forEach(content => content.classList.remove('active'));
+                        document.getElementById(`${tabId}-tab`).classList.add('active');
+                        
+                        // Re-render KaTeX for new content
+                        setTimeout(renderKaTeX, 100);
+                    });
+                });
+            }
+            
+            function setupEventListeners() {
+                // Hamburger menu toggle
+                document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+                
+                // Theme toggle
+                document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+                
+                // Refresh buttons for each topic
+                document.getElementById('refresh-intro').addEventListener('click', () => loadTopicMCQs('intro'));
+                document.getElementById('refresh-excretion').addEventListener('click', () => loadTopicMCQs('excretion'));
+                document.getElementById('refresh-kidney').addEventListener('click', () => loadTopicMCQs('kidney'));
+                document.getElementById('refresh-nephron').addEventListener('click', () => loadTopicMCQs('nephron'));
+                document.getElementById('refresh-osmoregulation').addEventListener('click', () => loadTopicMCQs('osmoregulation'));
+                document.getElementById('refresh-disorders').addEventListener('click', () => loadTopicMCQs('disorders'));
+                document.getElementById('refresh-transplant').addEventListener('click', () => loadTopicMCQs('transplant'));
+                document.getElementById('refresh-thermoregulation').addEventListener('click', () => loadTopicMCQs('thermoregulation'));
+                
+                // Reset progress button
+                document.getElementById('reset-progress').addEventListener('click', resetProgress);
+            }
+            
+            function toggleMenu() {
+                const menuToggle = document.getElementById('menu-toggle');
+                const mainNav = document.getElementById('main-nav');
+                
+                menuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            }
+            
+            function toggleTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                document.body.classList.toggle('dark-mode');
+                themeToggle.classList.toggle('dark');
+                saveToLocalStorage('darkMode', document.body.classList.contains('dark-mode'));
+            }
+            
+            function loadAllMCQs() {
+                // Load MCQs for each topic
+                loadTopicMCQs('intro');
+                loadTopicMCQs('excretion');
+                loadTopicMCQs('kidney');
+                loadTopicMCQs('nephron');
+                loadTopicMCQs('osmoregulation');
+                loadTopicMCQs('disorders');
+                loadTopicMCQs('transplant');
+                loadTopicMCQs('thermoregulation');
+            }
+            
+            function loadTopicMCQs(topic) {
+                const container = document.getElementById(`${topic}-mcqs-container`);
+                if (!container) return;
+                
+                container.innerHTML = '';
+                
+                // Randomize order of MCQs for this topic
+                const shuffledMCQs = [...homeostasisMCQs[topic]].sort(() => Math.random() - 0.5);
+                
+                shuffledMCQs.forEach(mcq => {
+                    const mcqCard = createMCQCard(mcq, topic);
+                    container.appendChild(mcqCard);
+                });
+                
+                // Re-render KaTeX
+                setTimeout(renderKaTeX, 100);
+            }
+            
+            function createMCQCard(mcq, topic) {
+                const card = document.createElement('div');
+                card.className = 'card mcq-card fade-in';
+                card.id = `${topic}-mcq-${mcq.id}`;
+                
+                // Check if this MCQ has been completed
+                const isCompleted = progress[topic][mcq.id - 1];
+                
+                // Randomize option order
+                const options = [...mcq.options];
+                const correctAnswer = mcq.correctAnswer;
+                const correctOption = options[correctAnswer];
+                
+                // Shuffle options
+                for (let i = options.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [options[i], options[j]] = [options[j], options[i]];
+                }
+                
+                // Find new index of correct answer after shuffling
+                const newCorrectIndex = options.indexOf(correctOption);
+                
+                card.innerHTML = `
+                    <div class="mcq-info">
+                        <div class="mcq-id">MCQ #${mcq.id} ${isCompleted ? '<i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>' : ''}</div>
+                        <div class="mcq-subject">${getTopicName(topic)}</div>
+                        <div class="mcq-question">${mcq.question}</div>
+                        <div class="mcq-options">
+                            ${options.map((option, index) => `
+                                <div class="mcq-option" data-option="${index}" data-correct="${index === newCorrectIndex}">${String.fromCharCode(65 + index)}) ${option}</div>
+                            `).join('')}
+                        </div>
+                        <div class="mcq-explanation">
+                            <div class="explanation-title">Explanation:</div>
+                            <div class="explanation-content">${mcq.explanation}</div>
+                        </div>
+                    </div>
+                    <div class="mcq-actions">
+                        <button class="btn btn-primary check-answer-btn">
+                            <i class="fas fa-check"></i> Check Answer
+                        </button>
+                        <button class="btn btn-secondary show-explanation-btn">
+                            <i class="fas fa-lightbulb"></i> Show Explanation
+                        </button>
+                    </div>
+                `;
+                
+                // Add event listeners
+                const checkAnswerBtn = card.querySelector('.check-answer-btn');
+                const showExplanationBtn = card.querySelector('.show-explanation-btn');
+                const optionElements = card.querySelectorAll('.mcq-option');
+                
+                let selectedOption = null;
+                
+                // If already completed, show the correct answer
+                if (isCompleted) {
+                    const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                    correctOptionElement.classList.add('correct');
+                    
+                    optionElements.forEach(option => {
+                        option.style.pointerEvents = 'none';
+                    });
+                    
+                    checkAnswerBtn.disabled = true;
+                    checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                } else {
+                    optionElements.forEach(option => {
+                        option.addEventListener('click', () => {
+                            optionElements.forEach(opt => opt.classList.remove('selected'));
+                            option.classList.add('selected');
+                            selectedOption = parseInt(option.getAttribute('data-option'));
+                        });
+                    });
+                    
+                    checkAnswerBtn.addEventListener('click', () => {
+                        if (selectedOption === null) {
+                            alert('Please select an answer first!');
+                            return;
+                        }
+                        
+                        optionElements.forEach(option => {
+                            option.classList.remove('correct', 'incorrect');
+                        });
+                        
+                        const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                        correctOptionElement.classList.add('correct');
+                        
+                        const selectedOptionElement = card.querySelector(`.mcq-option[data-option="${selectedOption}"]`);
+                        const isCorrect = selectedOptionElement.getAttribute('data-correct') === 'true';
+                        
+                        if (!isCorrect) {
+                            selectedOptionElement.classList.add('incorrect');
+                        } else {
+                            // Mark as completed
+                            progress[topic][mcq.id - 1] = true;
+                            saveProgress();
+                            updateProgress();
+                            
+                            const mcqId = card.querySelector('.mcq-id');
+                            mcqId.innerHTML = `MCQ #${mcq.id} <i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>`;
+                            
+                            optionElements.forEach(option => {
+                                option.style.pointerEvents = 'none';
+                            });
+                            
+                            checkAnswerBtn.disabled = true;
+                            checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                        }
+                    });
+                }
+                
+                showExplanationBtn.addEventListener('click', () => {
+                    const explanation = card.querySelector('.mcq-explanation');
+                    explanation.classList.toggle('show');
+                });
+                
+                return card;
+            }
+            
+            function getTopicName(topic) {
+                const names = {
+                    intro: 'Homeostasis Introduction',
+                    excretion: 'Excretion Types',
+                    kidney: 'Kidney Structure',
+                    nephron: 'Nephron Function',
+                    osmoregulation: 'Osmoregulation',
+                    disorders: 'Urinary Disorders',
+                    transplant: 'Kidney Transplant',
+                    thermoregulation: 'Thermoregulation'
+                };
+                return names[topic] || topic;
+            }
+            
+            function updateProgress() {
+                // Calculate completion counts
+                const introCompleted = progress.intro.filter(Boolean).length;
+                const excretionCompleted = progress.excretion.filter(Boolean).length;
+                const kidneyCompleted = progress.kidney.filter(Boolean).length;
+                const nephronCompleted = progress.nephron.filter(Boolean).length;
+                const osmoregulationCompleted = progress.osmoregulation.filter(Boolean).length;
+                const disordersCompleted = progress.disorders.filter(Boolean).length;
+                const transplantCompleted = progress.transplant.filter(Boolean).length;
+                const thermoregulationCompleted = progress.thermoregulation.filter(Boolean).length;
+                
+                const totalCompleted = introCompleted + excretionCompleted + kidneyCompleted + nephronCompleted + 
+                                      osmoregulationCompleted + disordersCompleted + transplantCompleted + thermoregulationCompleted;
+                
+                // Calculate accuracy
+                const totalAttempted = Object.values(progress).flat().filter(x => x !== false).length;
+                const accuracy = totalAttempted > 0 ? Math.round((totalCompleted / totalAttempted) * 100) : 0;
+                
+                // Update stats
+                document.getElementById('completed-mcqs').textContent = totalCompleted;
+                document.getElementById('accuracy').textContent = `${accuracy}%`;
+                
+                // Update topic progress
+                document.getElementById('intro-completed').textContent = introCompleted;
+                document.getElementById('intro-progress').style.width = `${(introCompleted / 12) * 100}%`;
+                
+                document.getElementById('excretion-completed').textContent = excretionCompleted;
+                document.getElementById('excretion-progress').style.width = `${(excretionCompleted / 12) * 100}%`;
+                
+                document.getElementById('kidney-completed').textContent = kidneyCompleted;
+                document.getElementById('kidney-progress').style.width = `${(kidneyCompleted / 12) * 100}%`;
+                
+                document.getElementById('nephron-completed').textContent = nephronCompleted;
+                document.getElementById('nephron-progress').style.width = `${(nephronCompleted / 12) * 100}%`;
+                
+                document.getElementById('osmoregulation-completed').textContent = osmoregulationCompleted;
+                document.getElementById('osmoregulation-progress').style.width = `${(osmoregulationCompleted / 12) * 100}%`;
+                
+                document.getElementById('disorders-completed').textContent = disordersCompleted;
+                document.getElementById('disorders-progress').style.width = `${(disordersCompleted / 12) * 100}%`;
+                
+                document.getElementById('transplant-completed').textContent = transplantCompleted;
+                document.getElementById('transplant-progress').style.width = `${(transplantCompleted / 12) * 100}%`;
+                
+                document.getElementById('thermoregulation-completed').textContent = thermoregulationCompleted;
+                document.getElementById('thermoregulation-progress').style.width = `${(thermoregulationCompleted / 12) * 100}%`;
+                
+                // Update overall progress
+                document.getElementById('overall-completed').textContent = totalCompleted;
+                document.getElementById('overall-progress').style.width = `${(totalCompleted / 96) * 100}%`;
+                
+                // Update summary
+                document.getElementById('intro-summary').textContent = introCompleted;
+                document.getElementById('excretion-summary').textContent = excretionCompleted;
+                document.getElementById('kidney-summary').textContent = kidneyCompleted;
+                document.getElementById('nephron-summary').textContent = nephronCompleted;
+                document.getElementById('osmoregulation-summary').textContent = osmoregulationCompleted;
+                document.getElementById('disorders-summary').textContent = disordersCompleted;
+                document.getElementById('transplant-summary').textContent = transplantCompleted;
+                document.getElementById('thermoregulation-summary').textContent = thermoregulationCompleted;
+                
+                document.getElementById('intro-summary-progress').style.width = `${(introCompleted / 12) * 100}%`;
+                document.getElementById('excretion-summary-progress').style.width = `${(excretionCompleted / 12) * 100}%`;
+                document.getElementById('kidney-summary-progress').style.width = `${(kidneyCompleted / 12) * 100}%`;
+                document.getElementById('nephron-summary-progress').style.width = `${(nephronCompleted / 12) * 100}%`;
+                document.getElementById('osmoregulation-summary-progress').style.width = `${(osmoregulationCompleted / 12) * 100}%`;
+                document.getElementById('disorders-summary-progress').style.width = `${(disordersCompleted / 12) * 100}%`;
+                document.getElementById('transplant-summary-progress').style.width = `${(transplantCompleted / 12) * 100}%`;
+                document.getElementById('thermoregulation-summary-progress').style.width = `${(thermoregulationCompleted / 12) * 100}%`;
+            }
+            
+            function resetProgress() {
+                if (confirm('Are you sure you want to reset all progress? This action cannot be undone.')) {
+                    progress = {
+                        intro: Array(12).fill(false),
+                        excretion: Array(12).fill(false),
+                        kidney: Array(12).fill(false),
+                        nephron: Array(12).fill(false),
+                        osmoregulation: Array(12).fill(false),
+                        disorders: Array(12).fill(false),
+                        transplant: Array(12).fill(false),
+                        thermoregulation: Array(12).fill(false)
+                    };
+                    saveProgress();
+                    updateProgress();
+                    loadAllMCQs();
+                }
+            }
+            
+            function saveProgress() {
+                saveToLocalStorage('homeostasisProgress', progress);
+            }
+            
+            function loadProgress() {
+                const savedProgress = getFromLocalStorage('homeostasisProgress');
+                if (savedProgress) {
+                    // Ensure all arrays have correct length
+                    progress = {
+                        intro: savedProgress.intro || Array(12).fill(false),
+                        excretion: savedProgress.excretion || Array(12).fill(false),
+                        kidney: savedProgress.kidney || Array(12).fill(false),
+                        nephron: savedProgress.nephron || Array(12).fill(false),
+                        osmoregulation: savedProgress.osmoregulation || Array(12).fill(false),
+                        disorders: savedProgress.disorders || Array(12).fill(false),
+                        transplant: savedProgress.transplant || Array(12).fill(false),
+                        thermoregulation: savedProgress.thermoregulation || Array(12).fill(false)
+                    };
+                }
+            }
+            
+            function applyAnimations() {
+                const elements = document.querySelectorAll('.panel, .card, .nav-btn');
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('fade-in');
+                    }, index * 50);
+                });
+            }
+            
+            function renderKaTeX() {
+                if (typeof renderMathInElement !== 'undefined') {
+                    renderMathInElement(document.body, {
+                        delimiters: [
+                            {left: '$$', right: '$$', display: true},
+                            {left: '$', right: '$', display: false},
+                            {left: '\\(', right: '\\)', display: false},
+                            {left: '\\[', right: '\\]', display: true}
+                        ],
+                        throwOnError: false
+                    });
+                }
+            }
+            
+            function saveToLocalStorage(key, value) {
+                try {
+                    localStorage.setItem(key, JSON.stringify(value));
+                } catch (e) {
+                    console.error('Error saving to localStorage:', e);
+                }
+            }
+            
+            function getFromLocalStorage(key) {
+                try {
+                    const value = localStorage.getItem(key);
+                    return value ? JSON.parse(value) : null;
+                } catch (e) {
+                    console.error('Error reading from localStorage:', e);
+                    return null;
+                }
+            }
+            
+            // Load dark mode setting
+            const darkMode = getFromLocalStorage('darkMode');
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-toggle').classList.add('dark');
+            }
+        });
+    </script>
+</body>
+</html>
